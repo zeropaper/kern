@@ -1,0 +1,39 @@
+@import "compass/css3";
+
+.kern-fileinfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  padding: 10px;
+  display: block;
+  background-color: #000;
+  color: #ccc;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 9999;
+  @include border-radius(10px);
+  
+  @include transition(all 1);
+  &:hover {
+    @include border-radius(0);
+    padding-left: 30px;
+    width: 200px;
+    height: auto;
+  }
+  
+  
+  .prop {
+    visibility: hidden;
+  }
+  &:hover .prop {
+    visibility: visible;
+  }
+  
+  
+  
+  a, label {
+    color: #fff;
+  }
+}
