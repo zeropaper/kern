@@ -1,5 +1,3 @@
-//this.ADMINCREDENTIALS = 'admin:secret';
-
 var Kern = require('./lib/kern').Kern;
 var kernApp = new Kern({
     contentDir:     __dirname +'/content'
