@@ -1,0 +1,1778 @@
+/* line 14, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 23, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 30, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 34, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 36, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 38, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 40, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 42, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+@import url( "http://fonts.googleapis.com/css?family=Play:400,700" );
+/*
+*/
+@font-face {
+  font-family: 'Expletus Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Expletus Sans Bold"), local("ExpletusSans-Bold"), url("http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwO1ouKFe7zgu3OIJnKP8_aw.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Expletus Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Expletus Sans SemiBold"), local("ExpletusSans-SemiBold"), url("http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwJd89XOto2BddXvdZwlDVbA.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Varela Round"), local("VarelaRound-Regular"), url("http://themes.googleusercontent.com/static/fonts/varelaround/v1/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff") format("woff");
+}
+
+/* line 49, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+body {
+  background-color: white;
+  color: #666666;
+  font-family: Lucida, Tahoma, Helvetica, Arial, Verdana, sans-serif;
+  line-height: 1.3;
+  font-size: 16px;
+}
+
+/* line 57, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h1, h2, h3, h4, h5, label, legend, dt {
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+  color: black;
+  font-family: 'Expletus Sans Bold', 'Expletus Sans', sans-serif;
+  font-weight: 700;
+}
+
+/* line 63, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h1, h2, h3 {
+  color: transparent;
+  text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.8), rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+}
+
+/* line 69, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h1 {
+  font-size: 2.4em;
+}
+
+/* line 72, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 75, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h3 {
+  font-size: 1.6em;
+}
+
+/* line 78, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+h4 {
+  font-size: 1.2em;
+}
+
+/* line 82, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+p {
+  padding: 0.2em 0;
+}
+
+/* line 86, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+dd {
+  padding: 0.2em 0 0.2em 0.4em;
+}
+
+/* line 91, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+a:link, a:active, a:visited {
+  outline: none;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0.1em;
+}
+/* line 97, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+a:hover {
+  color: black;
+}
+
+/* line 106, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 114, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+input:invalid, textarea:invalid {
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-shadow: 0 0 5px 0 red;
+  -webkit-box-shadow: 0 0 5px 0 red;
+  -o-box-shadow: 0 0 5px 0 red;
+  box-shadow: 0 0 5px 0 red;
+}
+
+/* line 119, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 121, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+textarea {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+/* line 127, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+code, pre {
+  padding: 0.5em;
+  border: 1px solid;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 134, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+code:hover, pre:hover {
+  width: auto;
+  max-width: auto;
+}
+
+/* line 140, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+code {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 146, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+pre {
+  margin: 0.5em;
+}
+
+/*************************************************************\
+ * Layout                                                    *
+\*************************************************************/
+/* line 155, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#site, #logo-name, #logo-link, #site-name, #breadcrumb {
+  overflow: visible;
+  height: 50px;
+  display: inline;
+  float: left;
+}
+
+/* line 159, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#site {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+  background: linear-gradient(top, #ffffff, #f2f2f2);
+}
+
+/* line 163, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#logo-name {
+  padding: 0 8px;
+  width: 214px;
+}
+
+/* line 170, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#site-name {
+  -moz-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  text-shadow: none;
+}
+/* line 173, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#site-name a {
+  color: transparent;
+  text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.8), -2px 1px 0 rgba(255, 255, 0, 0.8), -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+}
+/* line 176, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#site-name a:hover, #site-name a:active, #site-name a:visited {
+  color: transparent;
+}
+
+/* line 178, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#breadcrumb {
+  margin-top: 16px;
+  padding: 0 8px;
+}
+
+/* line 181, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#page-title {
+  padding: 0 8px;
+}
+
+/* line 184, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#page-middle {
+  width: 100%;
+  bottom: 0;
+  top: 58px;
+  position: absolute;
+}
+
+/* line 189, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#navigation, #content, #meta {
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  overflow: visible;
+}
+/* line 194, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#navigation .wrapper, #content .wrapper, #meta .wrapper {
+  overflow: visible;
+  padding: 8px;
+}
+
+/* line 197, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#navigation {
+  width: 230px;
+}
+
+/* line 199, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#content {
+  left: 230px;
+  right: 120px;
+}
+
+/* line 202, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#meta {
+  right: 0;
+  width: 120px;
+}
+
+/*************************************************************\
+ * UI                                                    *
+\*************************************************************/
+/* line 229, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+#messages {
+  width: 80%;
+  margin: auto;
+}
+
+/* line 265, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.message {
+  padding: 0.1em;
+  margin-bottom: 0.1em;
+  border: 1px dotted #aaa;
+  background-color: #ccc;
+  color: #333;
+}
+/* line 271, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.message:last-child {
+  margin-bottom: 0;
+}
+/* line 273, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.message.ok {
+  border-color: #aca;
+  background-color: #cfc;
+  color: #393;
+}
+/* line 277, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.message.error {
+  border-color: #caa;
+  background-color: #fcc;
+  color: #933;
+}
+/* line 281, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.message.server {
+  font-style: italic;
+}
+
+/* line 284, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li {
+  display: inline;
+  float: left;
+  width: 180px;
+  height: 180px;
+  margin: 0 4px 4px 0;
+  font-weight: bolder;
+  font-size: smaller;
+  position: relative;
+  background-size: 100%;
+}
+/* line 295, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a {
+  word-wrap: break-word;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  padding: 4px;
+  outline: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  vertical-align: bottom;
+  color: #8c8c8c;
+  overflow: hidden;
+  -moz-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  -webkit-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  -o-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+}
+/* line 315, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a span {
+  color: white;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: -100%;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 327, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a:hover, .children li a:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+/* line 330, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a:hover span, .children li a:focus span {
+  margin-right: 0;
+  margin-left: 0;
+}
+/* line 333, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li.no-art a span {
+  color: #8c8c8c;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 340, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  body {
+    background: blue;
+  }
+
+  /* line 239, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3, h4, h5, label, legend, dt {
+    font-family: 'Droid Sans', Helvetica, Tahoma, Arial;
+    text-shadow: none;
+  }
+
+  /* line 243, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3 {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+  }
+
+  /* line 248, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #navigation, #meta {
+    display: none;
+  }
+
+  /* line 250, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #content {
+    left: 0;
+    right: 0;
+  }
+
+  /* line 253, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  .children li {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  /* line 346, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  body {
+    background: green;
+  }
+
+  /* line 239, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3, h4, h5, label, legend, dt {
+    font-family: 'Droid Sans', Helvetica, Tahoma, Arial;
+    text-shadow: none;
+  }
+
+  /* line 243, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3 {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+  }
+
+  /* line 248, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #navigation, #meta {
+    display: none;
+  }
+
+  /* line 250, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #content {
+    left: 0;
+    right: 0;
+  }
+
+  /* line 253, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  .children li {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  /* line 352, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  body {
+    background: yellow;
+  }
+
+  /* line 239, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3, h4, h5, label, legend, dt {
+    font-family: 'Droid Sans', Helvetica, Tahoma, Arial;
+    text-shadow: none;
+  }
+
+  /* line 243, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  h1, h2, h3 {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+  }
+
+  /* line 248, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #navigation, #meta {
+    display: none;
+  }
+
+  /* line 250, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  #content {
+    left: 0;
+    right: 0;
+  }
+
+  /* line 253, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+  .children li {
+    width: 90px;
+    height: 90px;
+  }
+}
+/* line 4, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb span {
+  display: inline-block;
+}
+/* line 6, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb a {
+  display: block;
+}
+/* line 9, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb .entry {
+  text-align: left;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+/* line 15, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb .entry:hover .children, #breadcrumb .entry .selected .children {
+  border-bottom: 1px solid #cccccc;
+  height: auto;
+}
+/* line 18, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb .children {
+  height: 0;
+  padding: 15px 0 0 0;
+  clear: both;
+  position: absolute;
+  overflow: hidden;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 25, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb .children a {
+  border-left: 1px solid #cccccc;
+  position: relative;
+  padding: 0;
+  color: #000;
+  overflow: visible;
+  background-color: white;
+  padding: 3px 10px 2px 10px;
+  white-space: nowrap;
+  z-index: 1;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 37, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#breadcrumb .children a:hover {
+  z-index: 2;
+  -moz-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  -webkit-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  -o-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* line 44, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation a {
+  margin: 0 0 0.15em 0;
+}
+/* line 46, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation ul, #navigation li {
+  padding: 0;
+  list-style: none;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation li:before {
+  text-decoration: none;
+  content: "»";
+}
+/* line 53, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation .depth-0 {
+  padding-left: 0px;
+}
+/* line 55, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation .depth-1 {
+  padding-left: 10px;
+}
+/* line 57, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation .depth-2 {
+  padding-left: 20px;
+}
+/* line 59, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+#navigation .depth-2 {
+  padding-left: 20px;
+}
+
+/* line 63, /home/robert/Sites/kern/public/sass/partials/_menu.scss */
+header .menu li {
+  font-size: 1.3;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+/* line 7, /var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+header .menu li {
+  *display: inline;
+}
+
+/*/mediaquery*/
+/*/mediaquery*/
+@media print {
+  /* line 10, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 12, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 13, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 14, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 15, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 16, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 17, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 18, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 19, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 21, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 22, /var/lib/gems/1.8/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/* line 4, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+#notifier {
+  display: none;
+  font-size: small;
+}
+
+/* line 9, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify {
+  width: 350px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* line 16, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-message {
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: rgba(0, 255, 255, 0.8) 1px -2px 0, rgba(255, 0, 255, 0.8) 1px 3px 0, rgba(255, 255, 0, 0.8) -2px 1px 0, rgba(0, 0, 0, 0.8) 1px -1px 0;
+  -webkit-box-shadow: rgba(0, 255, 255, 0.8) 1px -2px 0, rgba(255, 0, 255, 0.8) 1px 3px 0, rgba(255, 255, 0, 0.8) -2px 1px 0, rgba(0, 0, 0, 0.8) 1px -1px 0;
+  -o-box-shadow: rgba(0, 255, 255, 0.8) 1px -2px 0, rgba(255, 0, 255, 0.8) 1px 3px 0, rgba(255, 255, 0, 0.8) -2px 1px 0, rgba(0, 0, 0, 0.8) 1px -1px 0;
+  box-shadow: rgba(0, 255, 255, 0.8) 1px -2px 0, rgba(255, 0, 255, 0.8) 1px 3px 0, rgba(255, 255, 0, 0.8) -2px 1px 0, rgba(0, 0, 0, 0.8) 1px -1px 0;
+}
+/* line 24, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-message h4, .ui-notify-message p {
+  color: #fff;
+}
+/* line 27, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-message h4 {
+  font-size: big;
+  margin: 0;
+  padding: 0;
+}
+/* line 32, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-message p {
+  margin: 3px 0;
+  padding: 0;
+  line-height: 18px;
+}
+/* line 37, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-message:last-child {
+  margin-bottom: 0;
+}
+
+/* line 46, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-close {
+  text-decoration: underline;
+}
+
+/* line 50, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-click {
+  cursor: pointer;
+}
+
+/* line 54, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-cross {
+  margin-top: -4px;
+  float: right;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+}
+/* line 64, /home/robert/Sites/kern/public/sass/partials/ui/_notify.scss */
+.ui-notify-cross:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 7, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.button, button, input[type=button], input[type=submit] {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #f3f3f3;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZmJmYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViZWJlYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #ebebeb));
+  background: -webkit-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -moz-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -o-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -ms-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: linear-gradient(top, #fbfbfb, #ebebeb);
+  border-color: #9a9a9a;
+  color: #9a9a9a;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button:hover, .button:focus, button:hover, button:focus, input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus {
+  outline: none;
+  background: #e6e6e6;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #dfdfdf));
+  background: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -moz-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -o-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -ms-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: linear-gradient(top, #f0f0f0, #dfdfdf);
+  text-shadow: white 0 1px 0;
+  border-color: #5a5a5a;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #5a5a5a;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button:active, button:active, input[type=button]:active, input[type=submit]:active {
+  outline: none;
+  background: white;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+  background: linear-gradient(top, #ffffff, #f7f7f7);
+  border-color: #a6a6a6;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #a6a6a6;
+}
+/* line 9, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.button.submit, button.submit, input[type=button].submit, input[type=submit].submit {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #d0e5d0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q5ZWFkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M2ZTBjNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9ead9), color-stop(100%, #c6e0c6));
+  background: -webkit-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -moz-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -o-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -ms-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: linear-gradient(top, #d9ead9, #c6e0c6);
+  border-color: #5ca65c;
+  color: #5ca65c;
+  text-shadow: #f0f7f0 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.submit:hover, .button.submit:focus, button.submit:hover, button.submit:focus, input[type=button].submit:hover, input[type=button].submit:focus, input[type=submit].submit:hover, input[type=submit].submit:focus {
+  outline: none;
+  background: #bfdcbf;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjZTNjYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I1ZDdiNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cce3cc), color-stop(100%, #b5d7b5));
+  background: -webkit-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -moz-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -o-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -ms-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: linear-gradient(top, #cce3cc, #b5d7b5);
+  text-shadow: #e0eee0 0 1px 0;
+  border-color: #2e542e;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #2e542e;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.submit:active, button.submit:active, input[type=button].submit:active, input[type=submit].submit:active {
+  outline: none;
+  background: #e0eee0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjdmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZTlkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f7f0), color-stop(100%, #d6e9d6));
+  background: -webkit-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -moz-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -o-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -ms-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: linear-gradient(top, #f0f7f0, #d6e9d6);
+  border-color: #6daf6d;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #6daf6d;
+}
+/* line 11, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.button.cancel, button.cancel, input[type=button].cancel, input[type=submit].cancel {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #fafafa;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+  background: linear-gradient(top, #ffffff, #f2f2f2);
+  border-color: #a1a1a1;
+  color: #a1a1a1;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.cancel:hover, .button.cancel:focus, button.cancel:hover, button.cancel:focus, input[type=button].cancel:hover, input[type=button].cancel:focus, input[type=submit].cancel:hover, input[type=submit].cancel:focus {
+  outline: none;
+  background: #ededed;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #e6e6e6));
+  background: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: linear-gradient(top, #f7f7f7, #e6e6e6);
+  text-shadow: white 0 1px 0;
+  border-color: #616161;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #616161;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.cancel:active, button.cancel:active, input[type=button].cancel:active, input[type=submit].cancel:active {
+  outline: none;
+  background: white;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+  background: linear-gradient(top, #ffffff, #f7f7f7);
+  border-color: #a6a6a6;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #a6a6a6;
+}
+/* line 13, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.button.delete, button.delete, input[type=button].delete, input[type=submit].delete {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #f4dddd;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZThlOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwZDFkMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7e8e8), color-stop(100%, #f0d1d1));
+  background: -webkit-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -moz-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -o-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -ms-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: linear-gradient(top, #f7e8e8, #f0d1d1);
+  border-color: #c75757;
+  color: #c75757;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.delete:hover, .button.delete:focus, button.delete:hover, button.delete:focus, input[type=button].delete:hover, input[type=button].delete:focus, input[type=submit].delete:hover, input[type=submit].delete:focus {
+  outline: none;
+  background: #edcaca;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZDlkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5YmViZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2d9d9), color-stop(100%, #e9bebe));
+  background: -webkit-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -moz-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -o-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -ms-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: linear-gradient(top, #f2d9d9, #e9bebe);
+  text-shadow: #faf0f0 0 1px 0;
+  border-color: #772828;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #772828;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+.button.delete:active, button.delete:active, input[type=button].delete:active, input[type=submit].delete:active {
+  outline: none;
+  background: #faf0f0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2ZTVlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f6e5e5));
+  background: -webkit-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -moz-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -o-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -ms-linear-gradient(top, #ffffff, #f6e5e5);
+  background: linear-gradient(top, #ffffff, #f6e5e5);
+  border-color: #cd6a6a;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #cd6a6a;
+}
+
+/* line 16, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+a.button {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #f3f3f3;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZmJmYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViZWJlYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #ebebeb));
+  background: -webkit-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -moz-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -o-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: -ms-linear-gradient(top, #fbfbfb, #ebebeb);
+  background: linear-gradient(top, #fbfbfb, #ebebeb);
+  border-color: #9a9a9a;
+  color: #9a9a9a;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button:hover, a.button:focus {
+  outline: none;
+  background: #e6e6e6;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #dfdfdf));
+  background: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -moz-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -o-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: -ms-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background: linear-gradient(top, #f0f0f0, #dfdfdf);
+  text-shadow: white 0 1px 0;
+  border-color: #5a5a5a;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #5a5a5a;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button:active {
+  outline: none;
+  background: white;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+  background: linear-gradient(top, #ffffff, #f7f7f7);
+  border-color: #a6a6a6;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #a6a6a6;
+}
+/* line 18, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+a.button.submit {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #d0e5d0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q5ZWFkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M2ZTBjNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9ead9), color-stop(100%, #c6e0c6));
+  background: -webkit-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -moz-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -o-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: -ms-linear-gradient(top, #d9ead9, #c6e0c6);
+  background: linear-gradient(top, #d9ead9, #c6e0c6);
+  border-color: #5ca65c;
+  color: #5ca65c;
+  text-shadow: #f0f7f0 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.submit:hover, a.button.submit:focus {
+  outline: none;
+  background: #bfdcbf;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjZTNjYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I1ZDdiNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cce3cc), color-stop(100%, #b5d7b5));
+  background: -webkit-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -moz-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -o-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: -ms-linear-gradient(top, #cce3cc, #b5d7b5);
+  background: linear-gradient(top, #cce3cc, #b5d7b5);
+  text-shadow: #e0eee0 0 1px 0;
+  border-color: #2e542e;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #2e542e;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.submit:active {
+  outline: none;
+  background: #e0eee0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjdmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZTlkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f7f0), color-stop(100%, #d6e9d6));
+  background: -webkit-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -moz-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -o-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: -ms-linear-gradient(top, #f0f7f0, #d6e9d6);
+  background: linear-gradient(top, #f0f7f0, #d6e9d6);
+  border-color: #6daf6d;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #6daf6d;
+}
+/* line 20, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+a.button.cancel {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #fafafa;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+  background: linear-gradient(top, #ffffff, #f2f2f2);
+  border-color: #a1a1a1;
+  color: #a1a1a1;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.cancel:hover, a.button.cancel:focus {
+  outline: none;
+  background: #ededed;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #e6e6e6));
+  background: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background: linear-gradient(top, #f7f7f7, #e6e6e6);
+  text-shadow: white 0 1px 0;
+  border-color: #616161;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #616161;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.cancel:active {
+  outline: none;
+  background: white;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+  background: linear-gradient(top, #ffffff, #f7f7f7);
+  border-color: #a6a6a6;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #a6a6a6;
+}
+/* line 22, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+a.button.delete {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #f4dddd;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZThlOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwZDFkMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7e8e8), color-stop(100%, #f0d1d1));
+  background: -webkit-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -moz-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -o-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: -ms-linear-gradient(top, #f7e8e8, #f0d1d1);
+  background: linear-gradient(top, #f7e8e8, #f0d1d1);
+  border-color: #c75757;
+  color: #c75757;
+  text-shadow: white 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  -webkit-transition-duration: 0.218s;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.delete:hover, a.button.delete:focus {
+  outline: none;
+  background: #edcaca;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZDlkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5YmViZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2d9d9), color-stop(100%, #e9bebe));
+  background: -webkit-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -moz-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -o-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: -ms-linear-gradient(top, #f2d9d9, #e9bebe);
+  background: linear-gradient(top, #f2d9d9, #e9bebe);
+  text-shadow: #faf0f0 0 1px 0;
+  border-color: #772828;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #772828;
+}
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+a.button.delete:active {
+  outline: none;
+  background: #faf0f0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2ZTVlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f6e5e5));
+  background: -webkit-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -moz-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -o-linear-gradient(top, #ffffff, #f6e5e5);
+  background: -ms-linear-gradient(top, #ffffff, #f6e5e5);
+  background: linear-gradient(top, #ffffff, #f6e5e5);
+  border-color: #cd6a6a;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: #cd6a6a;
+}
+
+/* line 26, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+input[type=text], input[type=password], input[type=mail], input[type=date], input[type=datetime], input[type=file] {
+  background: #f3f3f3;
+  font: inherit;
+  border-color: #9a9a9a;
+  color: #9a9a9a;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  outline: none;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 77, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+input[type=text]:focus, input[type=text]:hover, input[type=password]:focus, input[type=password]:hover, input[type=mail]:focus, input[type=mail]:hover, input[type=date]:focus, input[type=date]:hover, input[type=datetime]:focus, input[type=datetime]:hover, input[type=file]:focus, input[type=file]:hover {
+  outline: none;
+  background: #e6e6e6;
+  text-shadow: white 0 1px 0;
+  border-color: #5a5a5a;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  color: #5a5a5a;
+}
+
+/* line 29, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+textarea {
+  background: #f3f3f3;
+  font: inherit;
+  border-color: #9a9a9a;
+  color: #9a9a9a;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  outline: none;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 77, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+textarea:focus, textarea:hover {
+  outline: none;
+  background: #e6e6e6;
+  text-shadow: white 0 1px 0;
+  border-color: #5a5a5a;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  color: #5a5a5a;
+}
+
+/* line 33, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox {
+  position: absolute;
+  right: 0;
+  height: 50px;
+  min-height: 50px;
+  font-size: 14px;
+  font-weight: bolder;
+  z-index: 999;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid transparent;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+  background: linear-gradient(top, #ffffff, #f2f2f2);
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+}
+/* line 45, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox.over {
+  border-left: 1px solid #cccccc;
+  min-height: 120px;
+  width: 120px;
+}
+/* line 49, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox.in {
+  min-height: 300px;
+  width: 300px;
+}
+/* line 52, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox .imageHolder {
+  padding: 10px;
+  margin: 9px;
+  border: rgba(0, 0, 0, 0.5);
+  display: block;
+  overflow: hidden;
+}
+
+/* line 61, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox .preview {
+  padding: 8px;
+}
+/* line 65, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox .progressHolder {
+  height: 2px;
+  border: 1px solid black;
+  border-width: 1px 0;
+  background-color: #333;
+  width: 100%;
+}
+/* line 71, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox .progress {
+  height: 2px;
+  border-width: 1px 0;
+  background-color: #3a3;
+  width: 0;
+}
+/* line 76, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox img {
+  opacity: 0.5;
+  background: no-repeat center;
+  background-size: contain;
+  width: 160px;
+  height: 160px;
+  display: block;
+  -moz-transition: opacity 0.218s;
+  -webkit-transition: opacity 0.218s;
+  -o-transition: opacity 0.218s;
+  transition: opacity 0.218s;
+}
+/* line 84, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+#dropbox .done img {
+  opacity: 1;
+}
+
+/* line 90, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  display: block;
+  overflow: visible;
+  z-index: 9999;
+  padding: 5px;
+  width: 150px;
+  background-color: #000;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+}
+/* line 104, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo a, .kern-fileinfo label {
+  color: #999;
+}
+/* line 106, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo .prop {
+  clear: both;
+  margin-bottom: 5px;
+}
+/* line 109, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo .prop span {
+  background-color: #000;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 140px;
+  padding-right: 5px;
+  -moz-transition: max-width 0.3;
+  -webkit-transition: max-width 0.3;
+  -o-transition: max-width 0.3;
+  transition: max-width 0.3;
+}
+/* line 118, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo .prop span:hover {
+  max-width: 1000px;
+}
+/* line 120, /home/robert/Sites/kern/public/sass/partials/_kern.scss */
+.kern-fileinfo .prop:last-child {
+  margin-bottom: 0;
+}
