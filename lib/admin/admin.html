@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]--><!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]--><!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+  <html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>The page template</title>
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+    <base href="/" />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <link type="text/css" rel="stylesheet" href="/js/lib/jquery-ui/themes/base/jquery.ui.all.css" />
+    <link type="text/css" rel="stylesheet" href="/js/lib/jquery-notify/ui.notify.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    
+    <style type="text/css">
+      #dropbox {
+        width: 200px;
+      }
+      #dropbox, #dropbox .imageHolder{
+        padding: 10px;
+        margin: 9px;
+        border: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.2);
+        display: block;
+        overflow: hidden;
+      }
+      #dropbox .imageHolder{
+        
+      }
+      #dropbox .uploaded {
+      }
+      #dropbox .progressHolder {
+        height:2px;
+        border: 1px solid black;
+        border-width: 1px 0;
+        background-color: #333;
+        width: 100%;
+      }
+      #dropbox .progressHolder {
+        height:2px;
+        border: 1px solid black;
+        border-width: 1px 0;
+        background-color: #333;
+        width: 100%;
+      }
+      #dropbox .progress 
+        height: 2px;
+        border-width: 1px 0;
+        background-color: #3a3;
+        width: 100%;
+      }
+      #dropbox img {
+        opacity: 0.5;
+        background: no-repeat center;
+        background-size: contain;
+        width: 160px;
+        height: 160px;
+        display: block;
+      }
+      #dropbox img.done {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dropbox">
+      <span class="message">Drop images here to upload.</span>
+    </div>
+    
+    
+    
+    
+    
+    <link type="kern/lib" id="jqueryui" />
+    <link type="kern/lib" id="kern:notify" />
+    <link type="kern/lib" id="extension:admin.js" rel="serverscript" />
+    
+    
+    <script type="text/javascript">
+      //<![CDATA[
+      (function(b) {
+        function c() {
+        }
+        for (var d = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","), a; a = d.pop();) 
+          b[a] = b[a] || c
+      })(window.console = window.console || {});
+      //]]>
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery-1.6.4.js">
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery-filedrop/jquery.filedrop.js">
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery-ui/ui/jquery.ui.core.js">
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery-ui/ui/jquery.ui.widget.js">
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery-notify/src/jquery.notify.min.js">
+    </script>
+    <script type="text/javascript" src="/js/lib/jquery.form.js">
+    </script>
+    <script type="text/javascript">
+      $(function() {
+      
+        var dropbox = $('#dropbox'), message = $('.message', dropbox);
+        
+        dropbox.filedrop({
+          // The name of the $_FILES entry:
+          paramname: 'pic',
+          
+          maxfiles: 5,
+          maxfilesize: 2000,
+          url: '/kern',
+          
+          uploadFinished: function(i, file, response) {
+            console.info('i, file, response', i, file, response);
+            $('.preview', dropbox).eq(i).addClass('done');
+            // response is the JSON object that post_file.php returns
+          },
+          
+          error: function(err, file) {
+            switch (err) {
+              case 'BrowserNotSupported':
+                showMessage('Your browser does not support HTML5 file uploads!');
+                break;
+              case 'TooManyFiles':
+                alert('Too many files! Please select 5 at most! (configurable)');
+                break;
+              case 'FileTooLarge':
+                alert(file.name + ' is too large! Please upload files up to 2mb (configurable).');
+                break;
+              default:
+                break;
+            }
+          },
+          
+          // Called before each upload is started
+          beforeEach: function(file) {
+            if (file.type.match(/\/html/)) {
+              console.info('A HTML file!!', file);
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                console.info('reader load', reader, e.target.result, e);
+                
+                $('body').append('<iframe name="filepreview" style="width:100%;height: 400px;"></iframe>');
+                $('html', frames['filepreview'].document).html(e.target.result);
+              };
+              console.info('reader', reader);
+              reader.readAsText(file);
+            }
+            else if (file.type.match(/^(image|video|audio)\//)) {
+              createImage(file);
+            }
+            else if (file.type.match(/^text\//)) {
+              
+            }
+            else {
+              return false;
+            }
+            window.lastFile = file;
+          },
+          
+          uploadStarted: function(i, file, len) {
+            console.info('uploadstarted', i, file, len);
+          },
+          
+          progressUpdated: function(i, file, progress) {
+            console.info('progressUpdated', i, file, progress);
+            try {
+              $.data(file).width(progress +'%').text(progress);
+            }
+            catch (e) {
+              console.error(e);
+            }
+          }
+          
+        });
+        
+        var template = '<div class="preview">' +
+        '  <span class="imageHolder">' +
+        '    <img />' +
+        '    <span class="uploaded"></span>' +
+        '  </span>' +
+        '  <div class="progressHolder">' +
+        '    <div class="progress"></div>' +
+        '  </div>' +
+        '</div>';
+        
+        
+        function createImage(file) {
+          
+          var $prv = $(template), $img = $('img', $prv);
+          
+          
+          if (file.type.match(/^image\//)) {
+            var reader = new FileReader();
+            $img.width = 100;
+            $img.height = 100;
+            reader.onload = function(e) {
+            
+              // e.target.result holds the DataURL which
+              // can be used as a source of the $img:
+              
+              $img.attr('src', e.target.result);
+//              $img.css('background-image', 'url(' + e.target.result + ')');
+
+            };
+            
+            // Reading the file as a DataURL. When finished,
+            // this will trigger the onload function above:
+            reader.readAsDataURL(file);
+          }
+          else {
+            $img.before('<div class="misc-file"><span class="name">'+file.name+'</span> <span class="mime-type">'+file.type+'</span></div>');
+            $img.remove();
+          }
+          $prv.appendTo(dropbox);
+          
+          // Associating a $prv container
+          // with the file, using jQuery's $.data():
+          
+          $.data(file, $prv);
+        }
+        
+        function showMessage(msg) {
+          message.html(msg);
+        }
+        
+      });
+    </script>
+    <!--[if lt IE 7 ]>
+      <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script defer>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+  </body>
+</html>

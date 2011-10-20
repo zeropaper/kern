@@ -8,61 +8,98 @@
   <head>
     <meta charset='utf-8' />
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <!--
+    
+    -->
     <title>The page template</title>
+    <!--
+    
+    -->
     <meta content='' name='description' />
     <meta content='' name='author' />
-    <!-- error base --><base href="./../" />
-    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <link href='css/style.css' media='all' rel='stylesheet' />
+    <!--
+    
+    -->
+    <!-- error base --><base href="./" />
+    <!--
+    
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport' />
+    <!--
+    
+    -->
+    <link href='css/style.css' media='all' rel='stylesheet' class="kern-remove"/>
+    <link href='/css/style.css' media='all' rel='stylesheet'/>
   </head>
   <body>
-    <div id="sticky-footer-top">
-      <header id="page-header" class="full-width">
-        <div class="page-region" role="header">
-          <h1 role="site-name" class="site-name"><a href="/">kern.js</a></h1>
-          <div class="menu">
-            <!-- The tabbed menu -->
-          </div>
-          <div class="user">
-            <!-- login and all that.. -->
-          </div>
-        </div>
-      </header>
-      <section id="page-content" class="full-width">
-        <div class="page-region">
-          
-          <nav id="side-navigation">
-            Some navigation should come here
-          </nav>
-          
-          <div id="breadcrumb"><!-- breadcrump --></div>
-          <div id="content" role="document-body">
-            <h1 class="page-title">Page title</h1>
-            <!-- error content -->
-          </div>
-          
-          <aside role="document-aside">
-            aside
-          </aside>
-        </div>
-      </section>
-      <div id="sticky-footer-pusher">
-        <!-- -->
-      </div>
-    </div>
-    <footer id="page-footer" class="full-width">
-      <div class="page-region" role="footer">
-        The footer...
-      </div>
-    </footer>
+    <!--
     
+    -->
+    <header id="page-header">
+      <div id="site">
+        <div id="logo-name">
+          <a rel="home" href="/" id="logo-link" title="To the home page"><canvas id="logo" width="40" height="40"></canvas></a>
+          <h3 id="site-name"><a title="To the home page" rel="home" href="/">Site name</a></h3>
+        </div>
+        <nav id="breadcrumb">Breadcrumb links</nav>
+      </div>
+    </header>
     
     <!--
-    The following element is a wrapper
-    Designers can use for an easier prototyping statically
-    They are removed when the server renders the page
+    
+    -->
+    <div id="page-middle">
+      <nav id="navigation">
+        <div class="wrapper" role="page-navigation">
+          Navigation
+        </div>
+      </nav>
+      <!--
+      
+      -->
+      <section id="content">
+        <h1 class="page-title">Page title</h1>
+        <div class="wrapper" role="document-body">
+          Page content
+        </div>
+      </section>
+      <!--
+      
+      -->
+      <aside id="meta">
+        <div class="wrapper" role="document-meta">
+          Meta information
+        </div>
+      </aside>
+    </div>
+    <!--
+    
+    -->
+    <div id="notifier">
+      <div id="notification">
+        <h4>#{title}</h4>
+        <div>
+          #{text}
+        </div>
+      </div>
+      <div id="notification-error" class="ui-error">
+        <h4>#{title}</h4>
+        <div>
+          #{text}
+        </div>
+      </div>
+    </div>
+    <!--
+    
     -->
     <div role="static-dev-scripts" data-regions="header,main,footer">
+      <!--
+      The following element is a wrapper
+      Designers can use for an easier prototyping statically
+      They are removed when the server renders the page
+      -->
       <script type="text/javascript">
         //<![CDATA[
         (function(b) {
@@ -94,9 +131,6 @@
       </script>
       <script type="text/javascript">
         //<![CDATA[
-
-
-
         //]]>
       </script>
       <!--[if lt IE 7 ]>
@@ -104,9 +138,5 @@
         <script defer>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
       <![endif]-->
     </div>
-    
-    
-    
-    
   </body>
 </html>

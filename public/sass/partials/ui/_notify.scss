@@ -1,0 +1,70 @@
+@import "compass/css3";
+@import "../_base";
+
+#notifier {
+  display: none;
+  font-size: small;
+}
+
+.ui-notify {
+  width: 350px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.ui-notify-message {
+  background: #000;
+  background: rgba(#000, 0.8);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include border-radius(2px);
+  @include box-shadow($cyan 1px -2px 0, $magenta 1px 3px 0, $yellow -2px 1px 0, $black 1px -1px 0);
+  h4, p {
+    color: #fff;
+  }
+  h4 {
+    font-size: big;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    margin: 3px 0;
+    padding: 0;
+    line-height: 18px
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ui-notify-message-style {
+  //@include box-shadow($cyan 2px -3px 0, $magenta 3px 6px 0, $yellow -4px 2px 0, $black 1px -3px 0);
+}
+
+.ui-notify-close {
+  text-decoration: underline;
+}
+
+.ui-notify-click {
+  cursor: pointer;
+}
+
+.ui-notify-cross {
+  margin-top: -4px;
+  float: right;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+  &:hover {
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+

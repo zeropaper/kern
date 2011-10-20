@@ -32,17 +32,22 @@ $selected-background-color: #1AD4EE;  // bg-color for selected text
 
 $list-left-margin: 2em;  // left margin for ul an ol
 
-$sidebars-width: 260px;
+$sidebars-width: 180px;
 
 
 
 $opacity: 0.8;
-$cyan: rgba( #0FF, $opacity );
-$magenta: rgba( #F0F, $opacity );
-$yellow: rgba( #FF0, $opacity );
-$black: rgba( #000, $opacity );
+$cyan: rgba(#0FF, $opacity );
+$magenta: rgba(#F0F, $opacity );
+$yellow: rgba(#FF0, $opacity );
+$black: rgba(#000, $opacity );
 
 
+
+$header-height: 50px;
+$navigation-width: 230px;
+$meta-width: 120px;
+$spacing: 8px;
 
 
 

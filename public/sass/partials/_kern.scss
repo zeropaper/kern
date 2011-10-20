@@ -1,39 +1,122 @@
 @import "compass/css3";
+@import "partials/ui/ui";
+
+
+
+
+.button, button, input[type=button], input[type=submit] {
+  @include simple-button(#f3f3f3);
+  &.submit {
+    @include simple-button(darken(#e0eee0, 5%)); }
+  &.cancel {
+    @include simple-button(#fafafa); }
+  &.delete {
+    @include simple-button(darken(#faf0f0, 5%)); } }
+
+a.button {
+  @include simple-button(#f3f3f3);
+  &.submit {
+    @include simple-button(darken(#e0eee0, 5%)); }
+  &.cancel {
+    @include simple-button(#fafafa); }
+  &.delete {
+    @include simple-button(darken(#faf0f0, 5%)); } }
+
+input {
+  &[type=text], &[type=password], &[type=mail], &[type=date], &[type=datetime], &[type=file] {
+    @include simple-input(#f3f3f3); } }
+
+textarea {
+  @include simple-input(#f3f3f3); }
+
+
+#dropbox {
+  position: absolute;
+  right: 0;
+  height: $header-height;
+  min-height: $header-height;
+  font-size: 14px;
+  font-weight: bolder;
+  z-index: 999;
+  border-bottom: 1px solid darken($body-color, 20%);
+  border-left: 1px solid transparent;
+  @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%)));
+  @include transition(all 0.218s ease);
+  &.over {
+    border-left: 1px solid darken($body-color, 20%);
+    min-height: 120px;
+    width: 120px; }
+  &.in {
+    min-height: 300px;
+    width: 300px; }
+  .imageHolder{
+    padding: 10px;
+    margin: 9px;
+    border: rgba(0, 0, 0, 0.5);
+    display: block;
+    overflow: hidden; } }
+    
+
+#dropbox {
+  .preview {
+    padding: $spacing; }
+  .imageHolder{ }
+  .uploaded { }
+  .progressHolder {
+    height: 2px;
+    border: 1px solid black;
+    border-width: 1px 0;
+    background-color: #333;
+    width: 100%; }
+  .progress {
+    height: 2px;
+    border-width: 1px 0;
+    background-color: #3a3;
+    width: 0; }
+  img {
+    opacity: 0.5;
+    background: no-repeat center;
+    background-size: contain;
+    width: 160px;
+    height: 160px;
+    display: block; 
+    @include transition(opacity 0.218s); }
+  .done img {
+    opacity: 1; } }
+
+
+
 
 .kern-fileinfo {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  padding: 10px;
-  display: block;
-  background-color: #000;
+  left: 0;
   color: #ccc;
-  cursor: pointer;
-  overflow: hidden;
+  display: block;
+  overflow: visible;
   z-index: 9999;
-  @include border-radius(10px);
+  padding: 5px;
   
-  @include transition(all 1);
-  &:hover {
-    @include border-radius(0);
-    padding-left: 30px;
-    width: 200px;
-    height: auto;
-  }
+  width: 150px;
   
-  
-  .prop {
-    visibility: hidden;
-  }
-  &:hover .prop {
-    visibility: visible;
-  }
-  
-  
-  
+  background-color: #000;
+  @include box-shadow(rgba(#000, 0.5) 0 0 6px);  
   a, label {
-    color: #fff;
-  }
-}
+    color: #999; }
+  .prop {
+    clear: both;
+    margin-bottom: 5px;
+    span {
+      background-color: #000;
+      @include box-shadow(rgba(#000, 0.5) 0 0 6px);  
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      max-width: 140px;
+      padding-right: 5px;
+      @include transition(max-width 0.3);
+      &:hover {
+        max-width: 1000px; } }
+    &:last-child {
+      margin-bottom: 0; } } }
+

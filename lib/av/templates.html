@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <video role="template" width="320" height="240" poster="/av/videos/test.jpg" controls="controls" preload="none">
+      <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
+      <!--
+      <source type="av/mp4" src="/av/videos/test.mp4" />
+      -->
+      <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
+      <source type="av/webm" src="/av/videos/test.webm" />
+      <!-- Ogg/Vorbis for older Firefox and Opera versions -->
+      <source type="av/ogg" src="/av/videos/test.ogv" />
+      <!-- Optional: Add subtitles for each language -->
+      <track kind="subtitles" src="/av/videos/subtitles.srt" srclang="en" />
+      <!-- Optional: Add chapters -->
+      <track kind="chapters" src="/av/videos/chapters.srt" srclang="en" /> 
+      <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+      <object width="320" height="240" type="application/x-shockwave-flash" data="/kern/video.swf">
+          <param name="movie" value="/kern/video.swf" />
+          <param name="flashvars" value="controls=true&poster=/av/videos/test.jpg&file=/av/videos/test.mp4" />
+          <!-- Image as a last resort -->
+          <img src="/av/videos/test.jpg" width="320" height="240" title="No video playback capabilities" />
+      </object>
+    </video>
+</body>
+</html>

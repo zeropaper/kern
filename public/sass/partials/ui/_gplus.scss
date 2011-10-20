@@ -1,0 +1,78 @@
+@import "compass/css3";
+$experimental-support-for-svg: true;
+$front-back-contrast: 35%;
+
+@mixin button-common {
+  @include border-radius(2px);
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold; }
+
+
+@mixin button($bg-color: #f3f3f3) {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: $bg-color;
+  @include background(linear-gradient(top, lighten($bg-color, 3%), darken($bg-color, 3%)));
+  border-color: darken($bg-color, $front-back-contrast);
+  color: darken($bg-color, $front-back-contrast);
+  @include text-shadow(lighten($bg-color, 10%) 0 1px 0);
+  @include float-right;
+  @include button-common;
+  @include transition(all 0.218s ease);
+  -webkit-transition-duration: 0.218s; }
+
+@mixin button-hover($bg-color: #f3f3f3, $contrast: $front-back-contrast) {
+  outline: none;
+  background: $bg-color;
+  @include background(linear-gradient(top, lighten($bg-color, 4%), darken($bg-color, 3%)));
+  @include text-shadow(lighten($bg-color, 10%) 0 1px 0);
+  border-color: darken($bg-color, $contrast);
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  @include button-common;
+  color: darken($bg-color, $contrast); }
+
+@mixin button-active($bg-color: #f4f4f4, $contrast: $front-back-contrast) {
+  outline: none;
+  background: $bg-color;
+  @include background(linear-gradient(top, lighten($bg-color, 5%), darken($bg-color, 3%)));
+  border-color: darken($bg-color, $contrast);
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  @include button-common;
+  color: darken($bg-color, $contrast); }
+
+@mixin simple-button($bg-color: #f3f3f3) {
+  @include button($bg-color);
+  &:hover, &:focus {
+    @include button-hover(darken($bg-color, 5%), 55%); }
+  &:active {
+    @include button-active(lighten($bg-color, 5%)); } }
+
+
+
+
+@mixin input-hover($bg-color: #f4f4f4, $contrast: $front-back-contrast) {
+  outline: none;
+  background: $bg-color;
+  @include text-shadow(lighten($bg-color, 10%) 0 1px 0);
+  border-color: darken($bg-color, $contrast);
+  @include button-common;
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.2) inset);
+  color: darken($bg-color, $contrast); }
+
+@mixin input($bg-color: #f3f3f3) {
+  background: $bg-color;
+  font: inherit;
+  border-color: darken($bg-color, $front-back-contrast);
+  color: darken($bg-color, $front-back-contrast);
+  @include button-common;
+  outline: none;
+  @include transition(all 0.218s ease); }
+  
+@mixin simple-input($bg-color: #f3f3f3) {
+  @include input($bg-color);
+  &:focus, &:hover {
+    @include input-hover(darken($bg-color, 5%), 55%); } }

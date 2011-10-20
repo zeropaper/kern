@@ -7,18 +7,51 @@
 @mixin play-header-font {
   font-family: 'Play-Bold', sans-serif;
 }
+/*
+*/
+@font-face {
+  font-family: 'Expletus Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Expletus Sans Bold'),
+       local('ExpletusSans-Bold'),
+       url('http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwO1ouKFe7zgu3OIJnKP8_aw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Expletus Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Expletus Sans SemiBold'),
+       local('ExpletusSans-SemiBold'),
+       url('http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwJd89XOto2BddXvdZwlDVbA.woff') format('woff');
+}
+@mixin expletus-header-font {
+  font-family: 'Expletus Sans Bold', 'Expletus Sans', sans-serif;
+  font-weight: 700;
+}
 
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url('http://themes.googleusercontent.com/static/fonts/varelaround/v1/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+@mixin varela-round-header-font {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: normal;
+}
 
 @mixin header-font{
-  font-family: monospace;
-  // @include play-header-font;
+  @include expletus-header-font;
+//  @include varela-round-header-font;
 }
 
 body {
   background-color: $body-color;
   color: $font-color;
-  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-family: Lucida, Tahoma, Helvetica, Arial, Verdana, sans-serif;
   line-height: 1.3;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, label, legend, dt {
@@ -26,24 +59,15 @@ h1, h2, h3, h4, h5, label, legend, dt {
   padding: 0.2em 0;
   color: $link-color;
   @include header-font;
-  @include text-shadow(-0.05em 0.025em 0 $yellow, -0.05em -0.025em 0 $magenta, 0.025em 0.05em 0 $cyan);
+}
+h1, h2, h3 {
+  color: transparent;
+  @include text-shadow(1px -1px 0 $black, $yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
 }
 
 
 h1 {
-  font-size: 2.6em;
-  &.site-name {
-    font-size: 4em;
-    @include text-shadow(none);
-    a {
-      @include box-shadow(none);
-      @include text-shadow(0.025em -0.025em 0 $black, -0.05em 0.025em 0 $yellow, -0.05em -0.025em 0 $magenta, 0.025em 0.05em 0 $cyan);
-      //@include transition(all 1);
-      &:hover {
-        @include text-shadow(0.025em 0.025em 0 $black, -0.025em -0.025em 0 $yellow, -0.025em 0 0 $magenta, 0.05em 0.025em 0 $cyan);
-      }
-    }
-  }
+  font-size: 2.4em;
 }
 h2 {
   font-size: 2em;
@@ -63,18 +87,16 @@ dd {
   padding: 0.2em 0 0.2em 0.4em;
 }
 
-a, a:active, a:visited {
-  color: $link-color;
-  text-decoration: none;
-  display: inline-block;
-  @include box-shadow(0.05em -0.05em 0 $black, -0.1em 0.05em 0 $yellow, -0.1em -0.05em 0 $magenta, 0.05em 0.1em 0 $cyan);
-  //@include transition(all 0.1);
-  padding: 0 0.1em;
+a {
+  &:link, &:active, &:visited {
+    outline: none;
+    color: $link-color;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.1em; }
   &:hover {
-    @include box-shadow(0.05em 0.05em 0 $black, -0.05em -0.05em 0 $yellow, -0.05em 0 0 $magenta, 0.05em 0.05em 0 $cyan);
-  }
-}
-a:hover { color: $link-hover-color; }
+    color: $link-hover-color; } }
+
 
 
 a.ajax-processed {
@@ -102,72 +124,107 @@ textarea {
   display: block;
 }
 
+code, pre {
+  padding: 0.5em;
+  border: 1px solid;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  @include transition(all 0.218s ease);
+  &:hover {
+    width: auto;
+    max-width: auto;
+  }
+}
+
+code {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+pre {
+  margin: 0.5em;
+}
+
 /*************************************************************\
  * Layout                                                    *
 \*************************************************************/
 
-header, footer {
-  &.full-width {
-    //background-color: rgba(darken($body-color, 5%), 0.2);
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    .page-region {
-      padding: 10px 0;
-    }
+// Top --------------------------------------------------------
+#site, #logo-name, #logo-link, #site-name, #breadcrumb {
+  overflow: visible;
+  height: $header-height;
+  @include float-left; }
+#site {
+  width: 100%;
+  border-bottom: 1px solid darken($body-color, 20%);
+  @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%))); }
+#logo-name {
+  padding: 0 $spacing;
+  width: $navigation-width - (2 * $spacing); }
+#logo-link {
   }
-}
-
-aside {
-  font-size: small;
-}
-
-
-
-/* sticky footer ------------------------------------------------- */
-$footer-min-height: 36px;
-$footer-max-height: 240px;
-@include sticky-footer($footer-min-height + 1px, "#sticky-footer-top", "#sticky-footer-pusher", "#page-footer");
-#sticky-footer-top #sticky-footer-pusher, #page-footer {
-  //height: $footer-min-height;
-}
-
-
-#page-footer{
-  overflow: hidden;
-  background-color: $body-color;
-  @include transition(all 1 ease-in-out);
-  &:hover {
-    border-top: 3px solid #000;
-    height: $footer-max-height;
-    margin-top: 0 - $footer-max-height;
+#logo {
   }
-}
-
-
-
-#page-content {
-  z-index: 2;
-}
-
-.page-region {
-  width: 960px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-}
-
-#side-navigation, #content {
-  @include float-left;
-  min-height: 200px;
-}
-
-
+#site-name {
+  @include rotate(-2deg);
+  @include text-shadow(none);
+  a {
+    color: transparent;
+    @include text-shadow(1px -1px 0 $black, -2px 1px 0 $yellow, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+    &:hover, &:active, &:visited {
+      color: transparent; } } }
+#breadcrumb {
+  margin-top: 16px;
+  padding: 0 $spacing; }
+#page-title {
+  padding: 0 $spacing; }
+// Middle -----------------------------------------------------
+#page-middle {
+  width: 100%;
+  bottom: 0;
+  top: $header-height + $spacing;
+  position: absolute; }
+#navigation, #content, #meta {
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  overflow: visible;
+  .wrapper {
+    overflow: visible;
+    padding: $spacing; } }
+#navigation {
+  width: $navigation-width; }
 #content {
-//  margin-left: $sidebars-width;
-  width: 960px - $sidebars-width;
-  padding: 10px 0.2em;
-}
+  left: $navigation-width;
+  right: $meta-width; }
+#meta {
+  right: 0;
+  width: $meta-width; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************\
+ * UI                                                    *
+\*************************************************************/
+
+
 
 #messages {
   width: 80%;
@@ -178,15 +235,26 @@ $footer-max-height: 240px;
 
 
 
+@mixin mobile-layout($landscape: 1) {
+  h1, h2, h3, h4, h5, label, legend, dt {
+    font-family: 'Droid Sans', Helvetica, Tahoma, Arial;
+    @include text-shadow(none);
+  }
+  h1, h2, h3 {
+    color: $black;
+    @include text-shadow(none);
+  }
 
+  #navigation, #meta {
+    display: none; }
+  #content {
+    left: 0;
+    right: 0; }
+  .children li {
+    width: 90px;
+    height: 90px; }
+}
 
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-}
-@media only screen and (max-device-width: 480px) {
-}
-@media only screen and (max-device-width: 480px) and (orientation: landscape) {
-}
 
 
 
@@ -201,19 +269,88 @@ $footer-max-height: 240px;
   background-color: #ccc;
   color: #333;
   &:last-child{
-    margin-bottom: 0;
-  }
+    margin-bottom: 0; }
   &.ok {
     border-color: #aca;
     background-color: #cfc;
-    color: #393;
-  }
+    color: #393; }
   &.error {
     border-color: #caa;
     background-color: #fcc;
-    color: #933;
-  }
+    color: #933; }
   &.server {
-    font-style: italic;
+    font-style: italic; } }
+
+.children li {
+  $box-width: 180px;
+  
+  @include float-left;
+  width: $box-width;
+  height: $box-width;
+  margin: 0 4px 4px 0;
+  font-weight: bolder;
+  font-size: smaller;
+  position: relative;
+  background-size: 100%;
+  a {
+    word-wrap: break-word;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    padding: 4px;
+    outline: none;
+    
+    @include border-radius(2px);
+    @include transition( all 0.218s ease );
+    vertical-align: bottom;
+    color: darken($body-color, 45%);
+    overflow: hidden;
+    
+    @include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+    
+    
+    
+    span {
+      color: $body-color;
+      position: absolute;
+      top: $spacing / 2;
+      left: $spacing / 2;
+      bottom: $spacing / 2;
+      right: $spacing / 2;
+      width: 100%;
+      margin-right: -100%;
+      margin-left: -100%;
+      @include transition( all 0.218s ease ); }
+      
+    &:hover, &:focus {
+      background-color: $black;
+      outline: none;
+      span {
+        margin-right: 0; 
+        margin-left: 0; } } }
+  &.no-art a span {
+    color: darken($body-color, 45%);
+    margin-right: 0;
+    margin-left: 0; } }
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    background: blue;
   }
+  @include mobile-layout;
+}
+@media only screen and (max-device-width: 480px) {
+  body {
+    background: green;
+  }
+  @include mobile-layout;
+}
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  body {
+    background: yellow;
+  }
+  @include mobile-layout;
 }
