@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+  </head>
+  <body class="templates-editing">
+    <script type="text/template" id="library-template">
+      <h1>Music Library</h1>
+      <ul class="albums">
+      </ul>
+    </script>
+    <script type="text/template" id="playlist-template">
+      <h1>Playlist</h1>
+      <nav>
+        <button class="control play">
+          Play
+        </button>
+        <button class="control pause">
+          Pause
+        </button>
+        <button class="control prev">
+          Prev
+        </button>
+        <button class="control next">
+          Next
+        </button>
+      </nav>
+      <ul class="albums">
+      </ul>
+    </script>
+    <script type="text/template" id="album-template">
+      <button class="queue add">
+        <img src="images/add.png">
+      </button>
+      <button class="queue remove">
+        <img src="images/remove.png">
+      </button><span class="album-title"><%= title %></span>&nbsp;&nbsp;<span class="artist-name"><%= artist %></span>
+      <ol class="tracks">
+        <% _.each(tracks, function(track) { %>
+        <li>
+          <%= track.title %>
+        </li>
+        <% }); %>
+      </ol>
+    </script>
+    <div class="kern-template" id="kern-album-template">
+      <h3>hello world</h3>
+    </div>
+  </body>
+</html>
