@@ -1,9 +1,12 @@
 (function($) {
+  
   // your JavaScript here
-  $(window).load(function() {
+  $(window).resize(function(){
+    console.log('screen size '+ screen.width +'x'+ screen.height);
+  }).load(function() {
+    console.log('screen size '+ screen.width +'x'+ screen.height);
     function draw(size) {
       size = parseInt(size);
-      console.info(size);
       var canvas = this;//document.getElementById("logo");
       var context = canvas.getContext("2d");
       var centerX = size / 2;
