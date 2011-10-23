@@ -1,4 +1,3 @@
-
 var Kern = require('./lib/kern').Kern;
 var port = process.env.C9_PORT || 8080;
 var kernApp = new Kern({
