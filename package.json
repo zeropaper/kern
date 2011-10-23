@@ -3,11 +3,16 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "jQuery": ">=1.6.0"
-    , "backbone": ">=0.5.0"
-    , "underscore": ">=1.1.7"
-    , "socket.io": ">=0.8.0"
-    , "express": ">=1.0.7"
-    , "mongodb": ">= 0.9.6-7"
+      "jQuery": "1.6.3"
+    , "backbone": "0.5.3"
+    , "underscore": "1.2.0"
+    , "socket.io": "0.8.5"
+    , "express": "2.4.7"
+    , "connect": "1.7.1"
+    , "mime": "1.2.4"
+    , "formidable": "1.0.6"
+    , "imagemagick": "0.1.2"
+    , "htmlparser": ">= 1.7.3"
+    , "jsdom": ">=0.2.8"
   }
 }
