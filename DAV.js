@@ -19,6 +19,7 @@ var kernApp = new Kern({
       require('./lib/admin/admin')
     , require('./lib/editor/editor')
     , require('./lib/tap/tap')
+    , require('./lib/image/image')
     , require('./lib/av/av')
     , require('./examples/gmap/gmap')
   ]

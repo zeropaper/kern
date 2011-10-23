@@ -21,25 +21,7 @@ var kernApp = new Kern({
     , require('./lib/av/av')
     , require('./examples/gmap/gmap')
   ]
-  /*
-  session: {
-    secret: 'we9dwed',
-    key: 'kern.sid'
-  }
-  */
-  // some other settings...
 });
-/*
-kernApp.check({
-  'foo': function(){return this.commandExists('foo')},
-  'ffmpeg': function(){return this.commandExists('ffmpeg')},
-  'compass': function(){return this.commandExists('compass')},
-  'extract': function(){return this.commandExists('extract')},
-  '/usr/bin/ffmpeg': function(){return this.commandExists('/usr/bin/ffmpeg')},
-  '/usr/bin/compass': function(){return this.commandExists('/usr/bin/compass')},
-  '/usr/bin/extract': function(){return this.commandExists('/usr/bin/extract')}
-}, console.info);
-*/
 kernApp.compassWatch();
 kernApp.serve();
 // http://peter.sh/experiments/chromium-command-line-switches/
