@@ -7,6 +7,11 @@
     , "backbone": ">=0.5.0"
     , "underscore": ">=1.1.7"
     , "socket.io": ">=0.8.0"
+<<<<<<< HEAD
     , "express": ">=2.4.0"
+=======
+    , "express": ">=1.0.7"
+    , "mongodb": ">= 0.9.6-7"
+>>>>>>> 6dde56b19b7dc07990edf43629b0ae04f884b075
   }
 }
