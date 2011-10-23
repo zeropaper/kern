@@ -22,9 +22,18 @@ var kernApp = new Kern({
     , require('./lib/av/av')
     , require('./examples/gmap/gmap')
   ]
+  /*
+  session: {
+    secret: 'we9dwed',
+    key: 'kern.sid'
+  }
+  */
+  // some other settings...
 });
+
 kernApp.compassWatch();
 kernApp.serve();
+
 // http://peter.sh/experiments/chromium-command-line-switches/
 var exec = require('child_process').exec;
 //exec("google-chrome --focus-existing-tab-on-open http://0.0.0.0:8080/#!/docs &");
