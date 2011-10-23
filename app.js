@@ -1,10 +1,11 @@
 
 var Kern = require('./lib/kern').Kern;
+var port = process.env.C9_PORT || 8080;
 var kernApp = new Kern({
     contentDir:     __dirname +'/content'
   , cacheDir:       __dirname +'/cache'
   , publicDir:      __dirname +'/public'
-  , port:           process.env.C9_PORT || 8080
+  , port:           port
   , hostname:       '0.0.0.0'
   , pageAtStart:    '/'
   , socketEnabled:  true
