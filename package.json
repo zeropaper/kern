@@ -6,6 +6,7 @@
       "jQuery": "1.6.3"
     , "backbone": "0.5.3"
     , "underscore": "1.2.0"
+    , "underscore.string": "1.1.6"
     , "socket.io": "0.8.5"
     , "express": "2.4.7"
     , "connect": "1.7.1"
