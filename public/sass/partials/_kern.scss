@@ -31,19 +31,22 @@ textarea {
 
 
 #dropbox {
-  position: absolute;
+  position: fixed;
   right: 0;
-  height: $header-height;
-  min-height: $header-height;
+  top: 0;
+  margin: $spacing;
+  padding: $spacing;
+  height: $header-height - ($spacing * 4);
+  min-height: $header-height - ($spacing * 4);
   font-size: 14px;
   font-weight: bolder;
   z-index: 999;
-  border-bottom: 1px solid darken($body-color, 20%);
-  border-left: 1px solid transparent;
-  @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%)));
+  border: 1px dashed darken($body-color, 40%);
+  @include box-shadow(darken($body-color, 20%) 0 0 $spacing inset);
+  //@include background(linear-gradient(bottom, lighten($body-color, 5%), darken($body-color, 5%)));
+  background: $body-color;
   @include transition(all 0.218s ease);
   &.over {
-    border-left: 1px solid darken($body-color, 20%);
     min-height: 120px;
     width: 120px; }
   &.in {
@@ -58,22 +61,13 @@ textarea {
     
 
 #dropbox {
+  overflow: auto;
   .preview {
     padding: $spacing; }
   .imageHolder{ }
   .uploaded { }
-  .progressHolder {
-    height: 2px;
-    border: 1px solid black;
-    border-width: 1px 0;
-    background-color: #333;
-    width: 100%; }
-  .progress {
-    height: 2px;
-    border-width: 1px 0;
-    background-color: #3a3;
-    width: 0; }
   img {
+    margin: auto;
     opacity: 0.5;
     background: no-repeat center;
     background-size: contain;
