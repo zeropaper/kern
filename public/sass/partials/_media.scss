@@ -20,3 +20,98 @@
 @media print {
   @include media-print;
 }
+
+@mixin device-overrides {
+  body {
+    width: 768px;
+    height: auto;
+    overflow: hidden;
+  }
+/*
+  h1, h2, h3, h4, h5, label, legend, dt {
+    @include text-shadow(none);
+  }
+  h1, h2, h3 {
+    color: $black;
+    @include text-shadow(none);
+  }
+*/
+}
+
+@mixin mobile-layout($landscape: 1) {
+  @include device-overrides;
+  #navigation, #meta {
+    display: none; }
+  #content {
+    left: 0;
+    right: 0; }
+  .children li {
+    width: 90px;
+    height: 90px; }
+}
+
+
+@mixin tablet-layout($landscape: 1) {
+  @include device-overrides;
+  #meta {
+    display: none; }
+  #content {
+    right: 0; }
+  .children li {
+    width: 120px;
+    height: 120px;
+    a {
+     @include box-shadow(none); } }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    //background: blue;
+  }
+  @include tablet-layout(0);
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  body {
+    //background: purple;
+  }
+  @include tablet-layout;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    //background: green;
+  }
+  @include mobile-layout(0);
+}
+
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  body {
+    //background: yellow;
+  }
+  @include mobile-layout;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    //background: red;
+  }
+/* Styles */
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 480px) and (max-device-width : 680px) {
+  body {
+    //background: #FF3;
+  }
+/* Styles */
+}
+
+
+

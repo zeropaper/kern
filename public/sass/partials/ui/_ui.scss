@@ -1,2 +1,29 @@
+@import "../base";
 @import "notify";
 @import "gplus";
+
+
+.progressHolder {
+  display: block;
+  width: auto;
+  padding: 0;
+  margin: $spacing;
+  @include clearfix;
+  @include box-shadow(darken($body-color, 40%) 0 0 $spacing inset);
+  @include border-radius(2px);
+  border: 1px solid darken($body-color, 40%);
+  background-color: darken($body-color, 20%); }
+.progress {
+  height: $spacing * 2;
+  line-height: $spacing * 2;
+  font-size: $spacing * 1.2;
+  color: darken(#3a3, 20%);
+  font-weight: bolder;
+  @include text-shadow(lighten(#3a3, 20%) 0 1px 1px, darken(#3a3, 10%) 0 -1px 1px);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  @include float-left;
+  background-color: #3a3;
+  @include box-shadow(darken(#3a3, 20%) 0 0 $spacing inset);
+  width: 0; }

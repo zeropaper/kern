@@ -3,47 +3,13 @@
 @import "compass/layout/sticky-footer";
 @import "base";
 
-@import url( "http://fonts.googleapis.com/css?family=Play:400,700" );
-@mixin play-header-font {
-  font-family: 'Play-Bold', sans-serif;
-}
-/*
-*/
-@font-face {
-  font-family: 'Expletus Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Expletus Sans Bold'),
-       local('ExpletusSans-Bold'),
-       url('http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwO1ouKFe7zgu3OIJnKP8_aw.woff') format('woff');
-}
-@font-face {
-  font-family: 'Expletus Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Expletus Sans SemiBold'),
-       local('ExpletusSans-SemiBold'),
-       url('http://themes.googleusercontent.com/static/fonts/expletussans/v2/cl6rhMY77Ilk8lB_uYRRwJd89XOto2BddXvdZwlDVbA.woff') format('woff');
-}
-@mixin expletus-header-font {
-  font-family: 'Expletus Sans Bold', 'Expletus Sans', sans-serif;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Varela Round';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Varela Round'), local('VarelaRound-Regular'), url('http://themes.googleusercontent.com/static/fonts/varelaround/v1/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
-}
-@mixin varela-round-header-font {
-  font-family: 'Varela Round', sans-serif;
-  font-weight: normal;
-}
 
 @mixin header-font{
-  @include expletus-header-font;
-//  @include varela-round-header-font;
+  //font-family: 'Varela Round', sans-serif;
+  //font-weight: normal;
+  font-family: 'Rokkitt', serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
 body {
@@ -52,6 +18,8 @@ body {
   font-family: Lucida, Tahoma, Helvetica, Arial, Verdana, sans-serif;
   line-height: 1.3;
   font-size: 16px;
+  position: absolute;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, label, legend, dt {
@@ -61,8 +29,11 @@ h1, h2, h3, h4, h5, label, legend, dt {
   @include header-font;
 }
 h1, h2, h3 {
-  color: transparent;
-  @include text-shadow(1px -1px 0 $black, $yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+  color: $black;
+  @include text-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+}
+h4, h5, label, legend, dt {
+  font-weight: 400;
 }
 
 
@@ -156,10 +127,17 @@ pre {
   overflow: visible;
   height: $header-height;
   @include float-left; }
-#site {
+#page-header {
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 99;
+  height: $header-height;
   border-bottom: 1px solid darken($body-color, 20%);
+  @include box-shadow(darken($body-color, 5%) 0 3px 3px);
   @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%))); }
+#site {
+  width: 100%; }
 #logo-name {
   padding: 0 $spacing;
   width: $navigation-width - (2 * $spacing); }
@@ -168,7 +146,6 @@ pre {
 #logo {
   }
 #site-name {
-  @include rotate(-2deg);
   @include text-shadow(none);
   a {
     color: transparent;
@@ -177,29 +154,53 @@ pre {
       color: transparent; } } }
 #breadcrumb {
   margin-top: 16px;
+  height: $header-height - 16px;
   padding: 0 $spacing; }
-#page-title {
-  padding: 0 $spacing; }
+
+.page-title {
+  z-index: 45;
+  position: fixed;
+  left: $navigation-width;
+  top: $header-height + 1px;
+  padding: 0 $spacing;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgba($body-color, 0.8);
+  border-bottom: $body-color 1px solid; }
 // Middle -----------------------------------------------------
 #page-middle {
+  z-index: 98;
   width: 100%;
   bottom: 0;
-  top: $header-height + $spacing;
-  position: absolute; }
-#navigation, #content, #meta {
+  top: $header-height + 1px;
+  position: relative; }
+#navigation, #meta {
   bottom: 0;
   height: 100%;
-  position: absolute;
-  overflow: visible;
+  position: fixed;
+  overflow: hidden;
+  top: $header-height + 1px; }
+#navigation, #content, #meta {
   .wrapper {
-    overflow: visible;
+    overflow: hidden;
     padding: $spacing; } }
 #navigation {
+  z-index: 90;
+  border-right: 1px solid darken($body-color, 20%);
+  @include box-shadow(darken($body-color, 5%) 3px 0 3px);
+  @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%)));
   width: $navigation-width; }
 #content {
+  position: absolute;
+  min-height: 100%;
+  
   left: $navigation-width;
-  right: $meta-width; }
+  right: $meta-width;
+  .wrapper {
+    padding-top: $header-height + 1px + ($spacing * 2); } }
 #meta {
+  z-index: 89;
   right: 0;
   width: $meta-width; }
 
@@ -235,25 +236,6 @@ pre {
 
 
 
-@mixin mobile-layout($landscape: 1) {
-  h1, h2, h3, h4, h5, label, legend, dt {
-    font-family: 'Droid Sans', Helvetica, Tahoma, Arial;
-    @include text-shadow(none);
-  }
-  h1, h2, h3 {
-    color: $black;
-    @include text-shadow(none);
-  }
-
-  #navigation, #meta {
-    display: none; }
-  #content {
-    left: 0;
-    right: 0; }
-  .children li {
-    width: 90px;
-    height: 90px; }
-}
 
 
 
@@ -281,6 +263,8 @@ pre {
   &.server {
     font-style: italic; } }
 
+.children {
+  overflow: hidden; }
 .children li {
   $box-width: 180px;
   
@@ -291,7 +275,11 @@ pre {
   font-weight: bolder;
   font-size: smaller;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $black;
   background-size: 100%;
+  
   a {
     word-wrap: break-word;
     position: absolute;
@@ -319,7 +307,8 @@ pre {
       left: $spacing / 2;
       bottom: $spacing / 2;
       right: $spacing / 2;
-      width: 100%;
+      width: auto;
+      max-width: 100%;
       margin-right: -100%;
       margin-left: -100%;
       @include transition( all 0.218s ease ); }
@@ -335,22 +324,3 @@ pre {
     margin-right: 0;
     margin-left: 0; } }
 
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  body {
-    background: blue;
-  }
-  @include mobile-layout;
-}
-@media only screen and (max-device-width: 480px) {
-  body {
-    background: green;
-  }
-  @include mobile-layout;
-}
-@media only screen and (max-device-width: 480px) and (orientation: landscape) {
-  body {
-    background: yellow;
-  }
-  @include mobile-layout;
-}
