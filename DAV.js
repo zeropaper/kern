@@ -3,7 +3,7 @@ var kernApp = new Kern({
     contentDir:     '/home/robert/DAV'
   , cacheDir:       __dirname +'/cache/DAV'
   , publicDir:      __dirname +'/public'
-  , port:           8080
+  , port:           8081
   , hostname:       '0.0.0.0'
   , pageAtStart:    '/'
   , socketEnabled:  true
