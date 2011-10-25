@@ -18,8 +18,10 @@ var kernApp = new Kern({
   , publicDir:      __dirname +'/public'
 
 
+  // obvious settings
   , port:           port
   , hostname:       '0.0.0.0'
+
 
   , pageAtStart:    '/'
 
@@ -53,8 +55,15 @@ var kernApp = new Kern({
 
 });
 
+
+// if you have compass installed on the machine
+// you can watch for changes in your scss/sass files
+// (this is not using the "compass watch"
+// command but behaves the save)
 kernApp.compassWatch();
 
+
+// finally, start listenning / serve pages
 kernApp.serve();
 
 
