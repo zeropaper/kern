@@ -12,35 +12,37 @@ var kernApp = new Kern({
     // converted videos, resized images..
   , cacheDir:       __dirname +'/cache'
 
-    // This not properly speaking a public directory, rather a 
+    // This not properly speaking a public directory, rather a
     // directory where the files used for the look&feel of
     // the site are stored
   , publicDir:      __dirname +'/public'
-  
-  
+
+
   , port:           port
   , hostname:       '0.0.0.0'
 
   , pageAtStart:    '/'
-  
+
+  // in order to have real-time change propagation,
+  // you'll need to enable the websocket support
   , socketEnabled:  true
-  
-  // if that parameter is set to true, Kern will attempt to make a 
+
+  // if that parameter is set to true, Kern will attempt to make a
   // offline browsable web app
   , asApp:          true
-  
+
   // the name of the site / app
   , appName:        'Kern.js'
-  
+
   // enables session support
   , session: {
       secret:  'we9dwed',
       key:     'kern.sid'
     }
-  
-  
+
+
   //, extensionsDir:  __dirname +'/modules'
-  
+
   // Loading some Kern extensions
   , extensions: [
       require('./lib/admin/admin')
@@ -48,7 +50,7 @@ var kernApp = new Kern({
     , require('./lib/av/av')
     , require('./lib/editor/editor')
   ]
-  
+
 });
 
 kernApp.compassWatch();
