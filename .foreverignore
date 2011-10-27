@@ -1,0 +1,5 @@
+/content/*    # ignore all external submodules
+/public/*     # static files
+/cache/*     # static files
+./README.md   # a specific file
+*.css         # ignore any CSS files too
