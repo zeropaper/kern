@@ -16,10 +16,9 @@ var kernApp = new Kern({
   , extensions: [
       require('./lib/admin/admin')
     , require('./lib/editor/editor')
-    , require('./lib/tap/tap')
     , require('./lib/image/image')
     , require('./lib/av/av')
-    , require('./examples/gmap/gmap')
+    , require('./lib/tunes/tunes')
   ]
 });
 
