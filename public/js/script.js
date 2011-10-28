@@ -70,4 +70,41 @@
     $("textarea").TextAreaExpander();
   });
 
+  
+  if (_.isFunction($.simpleRousel)) {
+    
+    var $imgs = $('.field-field-images:not(.simplerousel-processed)');
+    if ($imgs.length) {
+      $imgs.addClass('eak-processed');
+      
+      var settings = Drupal.settings.eakrousel || {};
+      settings.nextLabel = Drupal.t('Next') + ' &gt; ';
+      settings.prevLabel = ' &lt; ' + Drupal.t('Back');
+      settings.pagerMaxItems = 5;
+      settings.captionSelector = '.description';
+      
+      var $node = $imgs.parents('.pane-page-content');
+      
+      settings.inject = {
+        '.row-2': '<span class="title">' +$('.pane-node-title', $node).text() +'</span>'
+                  +'<span class="separator"> / </span>'
+                  +'<span class="author">'+ $('.pane-field-images-author', $node).text() +'</span>'
+      }
+      
+      $('.pane-node-title, .pane-field-images-author', $node).remove();
+      
+      var $text = $('.pane-node-body', $imgs.parent());
+      settings.defaultAnimation = 'slide';
+      
+      $imgs.simpleRousel(settings);
+      $imgs.bind('pagechange', function(ev, prop){
+        var $this = $(this);
+        var s = $this.data('simpleRousel');
+        var $i = $(s.imageWrapperSelector, this);
+        var $caption = $(s.captionSelector, $i.eq(prop.to));
+        $('.simpleRousel-controls .title', this).text($caption.text());
+      });
+    }
+    
+  }
 })(jQuery || Zepto);

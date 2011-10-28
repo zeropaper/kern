@@ -16,5 +16,6 @@
     , "htmlparser": ">= 1.7.3"
     , "xml2js": "0.1.11"
     , "jsdom": ">=0.2.8"
+    , "inotify-plusplus": ">=0.1.8"
   }
 }
