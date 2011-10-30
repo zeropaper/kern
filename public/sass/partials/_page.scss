@@ -5,11 +5,9 @@
 
 
 @mixin header-font{
-  //font-family: 'Varela Round', sans-serif;
-  //font-weight: normal;
-  font-family: 'Rokkitt', serif;
+  font-family: OpenSansBold, sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-weight: 700;
 }
 
 body {
@@ -134,7 +132,7 @@ pre {
   z-index: 99;
   height: $header-height;
   border-bottom: 1px solid darken($body-color, 20%);
-  @include box-shadow(darken($body-color, 5%) 0 3px 3px);
+  @include box-shadow(rgba(#000, 0.1) 0 3px 3px);
   @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%))); }
 #site {
   width: 100%; }
@@ -188,7 +186,7 @@ pre {
 #navigation {
   z-index: 90;
   border-right: 1px solid darken($body-color, 20%);
-  @include box-shadow(darken($body-color, 5%) 3px 0 3px);
+  @include box-shadow(rgba(#000, 0.1) 3px 0 3px);
   @include background(linear-gradient(top, lighten($body-color, 5%), darken($body-color, 5%)));
   width: $navigation-width; }
 #content {

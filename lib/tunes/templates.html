@@ -1,34 +1,197 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <style>
+.kern-template-wrapper {
+  margin: 20px;
+  padding: 20px;
+  background: #efefef;
+}
+.kern-tunes-player {
+  width: 230px;
+}
+    </style>
+    <link href="../../public/css/style.css" type="text/css" rel="stylesheet" />
+    <style class="kern-style" id="kern-tunes">
 
+/*
+.kern-tunes-player .sprite {
+  text-indent: -999em;
+  background: #eee;
+}
 
+.kern-tunes-player .actions .sprite {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
 
+.kern-tunes-player,
+.kern-tunes-player .actions .playlist {
+  overflow: hidden;
+  color: #ccc;
+  background-color: #333;
+}
+.kern-tunes-player .actions .playlist .sprite {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 5px;
+  float: left;
+  display: inline;
+}
 
+.kern-tunes-player .actions .play,
+.kern-tunes-player .actions .pause {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  margin: 0 5px;
+  background-color: green;
+}
 
-<script type="text/template" id="kern-tunes-player-template">
-  <div class="kern-tunes-player">
-    <audio />
-    <video />
-    <div class="info">
-      <span class="current-time"></span>
-      <span class="duration"></span>
-    </div>
-  </div>
-</script>
+.kern-tunes-player .actions .pause {
+  background-color: blue;
+}
 
-<script type="text/template" id="kern-tunes-playlist-template">
-  <ol class="kern-tunes-playlist">
+.kern-tunes-player .playlist li.current {
+  color: #CCC;
+  background: #111;
+  border-color: #000 #000 #222 #000;
+}
+.kern-tunes-player .playlist {
+  color: #ccc;
+  background-color: #333;
+  overflow: hidden;
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
+}
+.kern-tunes-player .playlist li {
+  padding: 4px 8px;
+  border-style: solid;
+  border-width: 1px 0;
+  list-style: none;
+  margin: 0;
+  border-color: #444 #000 #222 #000;
+}
+.kern-tunes-player .playlist span {
+  display: inline-block;
+}
+
+.kern-tunes-player .playlist li {
+  position: relative;
+  height: 20px;
+}
+
+.kern-tunes-player .playlist .title {
+  cursor: pointer;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 165px;
+  left: 8px;
+}
+
+.kern-tunes-player .playlist .actions {
+  position: absolute;
+  right: 8px;
+}
+
+.kern-tunes-player .playlist .sprite {
+  text-indent: -999em;
+  width: 20px;
+  height: 20px;
+}
+
+.kern-tunes-player .kick {
+  background: red;
+}
+.kern-tunes-player .forward {
+  background: green;
+}
+*/
+
+    </style>
+    <script src="../../public/js/lib/jquery-1.6.4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function($){
+        $(document).ready(function(){
+          $('script.kern-template').each(function() {
+            var $t = $(this);
+            var $new = $('<div class="kern-template-wrapper"><div class="'+ $t.attr('class') +'" id="'+ $t.attr('id') +'-rendered" /></div>');
+            $new.children('.kern-template').html($t.html());
+            $t.before($new);
+          });
+        });
+      })(jQuery);
+    </script>
+  </head>
+  <body>
+    <script type="text/template" class="kern-template kern-tunes-player" id="kern-tunes-player-template">
+      <div class="actions">
+        <div class="playlist">
+          <span class="prev sprite">prev</span>
+          <span class="next sprite">next</span>
+        </div>
+        <div class="current-track">
+          <span class="play sprite">play</span>
+        </div>
+      </div>
+      <div class="players-wrapper">
+        <audio controls="controls" preload="metadata" <%= autoplay %> ></audio>
+        <video style="display: none;"></video>
+      </div>
+      <ol class="playlist">
+        <li>
+          <span class="title">Track title</span>
+          <span class="actions">
+            <span class="forward sprite">forward</span>
+            <span class="kick sprite">kick</span>
+          </span>
+        </li>
+        <li class="current">
+          <span class="title">Track title qsq sqs qs s qsqs qs</span>
+          <span class="actions">
+            <span class="forward sprite">forward</span>
+            <span class="kick sprite">kick</span>
+          </span>
+        </li>
+        <li>
+          <span class="title">Track title</span>
+          <span class="actions">
+            <span class="forward sprite">forward</span>
+            <span class="kick sprite">kick</span>
+          </span>
+        </li>
+        <li>
+          <span class="title">Track title</span>
+          <span class="actions">
+            <span class="forward sprite">forward</span>
+            <span class="kick sprite">kick</span>
+          </span>
+        </li>
+      </ol>
+    </script>
+    <!--
     
-  </ol>
-</script>
-
-
-
-
-</body>
+    
+    
+    -->
+    <script type="text/template" class="kern-template" id="kern-tunes-tracks-template">
+      <% _.each(collection.toJSON(), function(track, i){ %>
+      <li id="kern-tunes-track-<%= i %>">
+        <span class="title" rel="<%= track.url %>"><%= track.name %></span>
+        <span class="actions">
+          <span class="forward sprite" data-cid="<%= track.cid %>">forward</span>
+          <span class="kick sprite" data-cid="<%= track.cid %>">kick</span>
+        </span>
+      </li>
+      <% }); %>
+    </script>
+  </body>
 </html>

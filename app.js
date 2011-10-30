@@ -51,8 +51,17 @@ var kernApp = new Kern({
     , require('./lib/image/image')
     , require('./lib/av/av')
     , require('./lib/editor/editor')
+    , require('./lib/tunes/tunes')
+    , require('./simplemodule/simplemodule')
   ]
-
+  
+  // extension configuration
+  , simplemodule: {
+    _server: {
+      someServerSideOnlyVariable: true
+    },
+    commonVariable: 'OK!'
+  }
 });
 
 

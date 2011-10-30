@@ -5,57 +5,6 @@
     <title>Insert title here</title>
   </head>
   <body class="templates-editing">
-    <!--
-    
-    -->
-    <script type="text/template" id="library-template">
-      <h1>Music Library</h1>
-      <ul class="albums">
-      </ul>
-    </script>
-    <!--
-    
-    -->
-    <script type="text/template" id="playlist-template">
-      <h1>Playlist</h1>
-      <nav>
-        <button class="control play">
-          Play
-        </button>
-        <button class="control pause">
-          Pause
-        </button>
-        <button class="control prev">
-          Prev
-        </button>
-        <button class="control next">
-          Next
-        </button>
-      </nav>
-      <ul class="albums">
-      </ul>
-    </script>
-    <!--
-    
-    -->
-    <script type="text/template" id="album-template">
-      <button class="queue add">
-        <img src="images/add.png">
-      </button>
-      <button class="queue remove">
-        <img src="images/remove.png">
-      </button><span class="album-title"><%= title %></span>&nbsp;&nbsp;<span class="artist-name"><%= artist %></span>
-      <ol class="tracks">
-        <% _.each(tracks, function(track) { %>
-        <li>
-          <%= track.title %>
-        </li>
-        <% }); %>
-      </ol>
-    </script>
-    <!--
-    
-    -->
     <ul class="kern-template" id="content-entry">
     </ul>
     <!--
