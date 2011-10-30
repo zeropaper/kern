@@ -1,0 +1,85 @@
+
+
+
+.kern-tunes-player {
+  overflow: hidden;
+    color: #ccc;
+    background-color: #333;
+  .sprite {
+    text-indent: -999em;
+    background: #eee; } 
+  .actions {
+    .sprite {
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      &.play, &.pause {
+        cursor: pointer;
+        height: 70px;
+        width: 70px;
+        margin: 0 5px;
+        background-color: green; }
+      &.pause {
+        background-color: blue; } }
+    .playlist {
+      overflow: hidden;
+      color: #ccc;
+      background-color: #333; } }
+  .forward {
+    background: green; } 
+  .kick {
+    background: red; }
+  .prev, .next {
+    height: 30px; 
+    width: 30px; }
+  .next {} 
+  .prev {} 
+  .players-wrapper {} 
+  .playlist {
+    $button-size: 20px;
+    /*
+    color: #ccc;
+    background-color: #333;
+    overflow: hidden;
+    */
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+    span {
+      display: inline-block; }
+    li {
+      line-height: $button-size;
+      height: $button-size;
+      
+      padding: 4px 8px;
+      border-style: solid;
+      border-width: 1px 0;
+      list-style: none;
+      margin: 0;
+      border-color: #444 #000 #222 #000;
+      position: relative;
+      &.current {
+        color: #CCC;
+        background: #111;
+        border-color: #000 #000 #222 #000; } }
+    .actions {
+      position: absolute;
+      right: 8px;
+      .sprite {
+        cursor: pointer;
+        height: $button-size;
+        width: $button-size;
+        margin: 0 5px;
+        float: left;
+        display: inline; } } }
+    .title {
+      cursor: pointer;
+      position: absolute;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 165px;
+      left: 8px; } }
+
+
