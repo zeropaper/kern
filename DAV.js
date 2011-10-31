@@ -19,6 +19,7 @@ var kernApp = new Kern({
     , require('./lib/image/image')
     , require('./lib/av/av')
     , require('./lib/tunes/tunes')
+    , require('./lib/gallery/gallery')
   ]
 });
 

@@ -22,8 +22,7 @@ $front-back-contrast: 35%;
   @include text-shadow(lighten($bg-color, 10%) 0 1px 0);
   @include float-right;
   @include button-common;
-  @include transition(all 0.218s ease);
-  -webkit-transition-duration: 0.218s; }
+  @include transition(all 0.218s ease); }
 
 @mixin button-hover($bg-color: #f3f3f3, $contrast: $front-back-contrast) {
   outline: none;

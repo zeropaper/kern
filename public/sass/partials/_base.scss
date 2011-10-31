@@ -7,6 +7,7 @@
 // Low-yellow:    #EEDC1A
 
 $body-color: #fff;
+$body-color: #333;
 // #F6F6F6;
 
 $base-font-family: unquote('sans-serif');  // default font-family
@@ -16,8 +17,10 @@ $base-font-size: 16px;  // default font-size for YUI fonts
 $base-line-height: 1.231;  // default line-height for YUI fonts
 
 $font-color: darken($body-color, 60%);
+$font-color: #ccc;
 
 $link-color: #000;
+$link-color: #ddd;
 // #1AD4EE;
 
 $link-hover-color: darken($link-color, 10%);

@@ -9,33 +9,33 @@
   padding: 20px;
   background: #efefef;
 }
-.kern-tunes-player {
+.kern-gallery-player {
   width: 230px;
 }
     </style>
     <link href="../../public/css/style.css" type="text/css" rel="stylesheet" />
-    <style class="kern-style" id="kern-tunes">
+    <style class="kern-style" id="kern-gallery">
 
 /*
-.kern-tunes-player .sprite {
+.kern-gallery-player .sprite {
   text-indent: -999em;
   background: #eee;
 }
 
-.kern-tunes-player .actions .sprite {
+.kern-gallery-player .actions .sprite {
   cursor: pointer;
   padding: 0;
   margin: 0;
   display: inline-block;
 }
 
-.kern-tunes-player,
-.kern-tunes-player .actions .playlist {
+.kern-gallery-player,
+.kern-gallery-player .actions .playlist {
   overflow: hidden;
   color: #ccc;
   background-color: #333;
 }
-.kern-tunes-player .actions .playlist .sprite {
+.kern-gallery-player .actions .playlist .sprite {
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -44,8 +44,8 @@
   display: inline;
 }
 
-.kern-tunes-player .actions .play,
-.kern-tunes-player .actions .pause {
+.kern-gallery-player .actions .play,
+.kern-gallery-player .actions .pause {
   cursor: pointer;
   height: 70px;
   width: 70px;
@@ -53,16 +53,16 @@
   background-color: green;
 }
 
-.kern-tunes-player .actions .pause {
+.kern-gallery-player .actions .pause {
   background-color: blue;
 }
 
-.kern-tunes-player .playlist li.current {
+.kern-gallery-player .playlist li.current {
   color: #CCC;
   background: #111;
   border-color: #000 #000 #222 #000;
 }
-.kern-tunes-player .playlist {
+.kern-gallery-player .playlist {
   color: #ccc;
   background-color: #333;
   overflow: hidden;
@@ -70,7 +70,7 @@
   padding: 0;
   margin: 0;
 }
-.kern-tunes-player .playlist li {
+.kern-gallery-player .playlist li {
   padding: 4px 8px;
   border-style: solid;
   border-width: 1px 0;
@@ -78,16 +78,16 @@
   margin: 0;
   border-color: #444 #000 #222 #000;
 }
-.kern-tunes-player .playlist span {
+.kern-gallery-player .playlist span {
   display: inline-block;
 }
 
-.kern-tunes-player .playlist li {
+.kern-gallery-player .playlist li {
   position: relative;
   height: 20px;
 }
 
-.kern-tunes-player .playlist .title {
+.kern-gallery-player .playlist .title {
   cursor: pointer;
   position: absolute;
   text-overflow: ellipsis;
@@ -97,21 +97,21 @@
   left: 8px;
 }
 
-.kern-tunes-player .playlist .actions {
+.kern-gallery-player .playlist .actions {
   position: absolute;
   right: 8px;
 }
 
-.kern-tunes-player .playlist .sprite {
+.kern-gallery-player .playlist .sprite {
   text-indent: -999em;
   width: 20px;
   height: 20px;
 }
 
-.kern-tunes-player .kick {
+.kern-gallery-player .kick {
   background: red;
 }
-.kern-tunes-player .forward {
+.kern-gallery-player .forward {
   background: green;
 }
 */
@@ -132,13 +132,13 @@
     </script>
   </head>
   <body>
-    <script type="text/template" class="kern-template kern-tunes-player" id="kern-tunes-player-template">
+    <script type="text/template" class="kern-template kern-gallery-player" id="kern-gallery-player-template">
       <div class="actions">
         <div class="playlist">
           <span class="prev"><span class="sprite">Previous</span></span>
           <span class="next"><span class="sprite">Next</span></span>
         </div>
-        <div class="current-track">
+        <div class="current-image">
           <span class="play">
             <span class="sprite">Playing</span>
           </span>
@@ -184,13 +184,13 @@
     
     
     -->
-    <script type="text/template" class="kern-template" id="kern-tunes-tracks-template">
-      <% _.each(collection.toJSON(), function(track, i){ %>
-      <li id="kern-tunes-track-<%= i %>" class="<%= track.current %>">
-        <span class="title" rel="<%= track.url %>"><%= track.name %></span>
+    <script type="text/template" class="kern-template" id="kern-gallery-images-template">
+      <% _.each(collection.toJSON(), function(image, i){ %>
+      <li id="kern-gallery-image-<%= i %>" class="<%= image.current %>">
+        <span class="title" rel="<%= image.url %>"><%= image.name %></span>
         <span class="actions">
-          <span class="forward sprite" data-cid="<%= track.cid %>">forward</span>
-          <span class="kick sprite" data-cid="<%= track.cid %>">kick</span>
+          <span class="forward sprite" data-cid="<%= image.cid %>">forward</span>
+          <span class="kick sprite" data-cid="<%= image.cid %>">kick</span>
         </span>
       </li>
       <% }); %>
