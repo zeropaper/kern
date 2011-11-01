@@ -1,0 +1,54 @@
+@import "../base";
+@import "gplus";
+@import "compass/css3";
+
+#kern-gallery {
+  @include transition(background-color 0.218s);
+  background-color: rgba(#000, 0);
+  &.big {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    min-height: 450px;
+    background-color: rgba(#000, 0.75);
+    position: absolute;
+    z-index: 55; }
+  .image {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 450px;
+    .prev, .holder, .next {
+      position: absolute; }
+    .holder {
+      width: 100%;
+      z-index: 2; }
+    .prev, .next {
+      @include sprite-button;
+      font-size: 12px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      z-index: 3;
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #000;
+      background-color: rgba(#000, 0.5);
+      top: 120px; }
+    .prev {
+      left: 20px; }
+    .next {
+      right: 20px; }
+    img {
+      display: block;
+      margin: auto; } }
+  ol {
+    overflow: hidden; }
+  li {
+    @include float-left;
+    margin: 0 3px 3px 0; } }
