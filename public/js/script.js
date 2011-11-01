@@ -1,4 +1,7 @@
 (function($) {
+  
+  if (window.kern) kern.bind('fileapplied', function(){$(window).trigger('resize')});
+  
   // jQuery plugin definition
   $.fn.TextAreaExpander = function(minHeight, maxHeight) {
     var hCheck = !($.browser.msie || $.browser.opera);

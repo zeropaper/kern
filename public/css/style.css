@@ -895,13 +895,13 @@ header .menu li {
   top: 1px;
 }
 
-/* line 20, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 6, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player {
   overflow: hidden;
   color: #ccc;
   background-color: #333;
 }
-/* line 24, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 10, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .sprite {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -916,7 +916,7 @@ header .menu li {
 .kern-tunes-player .sprite {
   *display: inline;
 }
-/* line 29, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 15, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .button {
   outline: none;
   cursor: pointer;
@@ -952,28 +952,28 @@ header .menu li {
   padding: 0;
   margin: 0;
 }
-/* line 33, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 19, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions {
   overflow: hidden;
   height: 80px;
   position: relative;
 }
-/* line 37, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 23, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .playlist, .kern-tunes-player .actions .current-track {
   top: 4px;
   position: absolute;
 }
-/* line 40, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 26, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .playlist {
   top: 20px;
   width: 100%;
 }
-/* line 43, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 29, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .current-track {
   left: 80px;
   width: 70px;
 }
-/* line 46, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 32, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .play, .kern-tunes-player .actions .pause {
   cursor: pointer;
   background-image: url(../images/tunes-playpause.png);
@@ -1015,7 +1015,7 @@ header .menu li {
   text-align: center;
   line-height: 70px;
 }
-/* line 10, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 85, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .actions .play:hover, .kern-tunes-player .actions .play:focus, .kern-tunes-player .actions .pause:hover, .kern-tunes-player .actions .pause:focus {
   outline: none;
   background: #262626;
@@ -1047,7 +1047,7 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 14, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 89, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .actions .play:active, .kern-tunes-player .actions .pause:active {
   outline: none;
   background: #4d4d4d;
@@ -1078,7 +1078,7 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 54, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 40, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .play .sprite, .kern-tunes-player .actions .pause .sprite {
   -moz-transition: background 0.218s ease;
   -webkit-transition: background 0.218s ease;
@@ -1086,7 +1086,7 @@ header .menu li {
   transition: background 0.218s ease;
   background: url(../images/tunes-playpause.png) no-repeat -1px -74px transparent;
 }
-/* line 57, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 43, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .pause {
   -moz-border-radius: 35px;
   -webkit-border-radius: 35px;
@@ -1095,11 +1095,11 @@ header .menu li {
   -khtml-border-radius: 35px;
   border-radius: 35px;
 }
-/* line 59, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 45, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .pause .sprite {
   background: url(../images/tunes-playpause.png) no-repeat -1px -4px transparent;
 }
-/* line 61, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 47, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .actions .pause:hover, .kern-tunes-player .actions .pause:focus, .kern-tunes-player .actions .pause:active {
   -moz-border-radius: 35px;
   -webkit-border-radius: 35px;
@@ -1108,7 +1108,7 @@ header .menu li {
   -khtml-border-radius: 35px;
   border-radius: 35px;
 }
-/* line 65, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 51, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .prev, .kern-tunes-player .next {
   position: absolute;
   outline: none;
@@ -1147,7 +1147,7 @@ header .menu li {
   height: 40px;
   width: 40px;
 }
-/* line 10, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 85, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .prev:hover, .kern-tunes-player .prev:focus, .kern-tunes-player .next:hover, .kern-tunes-player .next:focus {
   outline: none;
   background: #262626;
@@ -1179,7 +1179,7 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 14, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 89, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .prev:active, .kern-tunes-player .next:active {
   outline: none;
   background: #4d4d4d;
@@ -1210,15 +1210,15 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 70, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 56, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .next {
   right: 8px;
 }
-/* line 72, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 58, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .prev {
   left: 8px;
 }
-/* line 75, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 61, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist {
   /*
   color: #ccc;
@@ -1229,11 +1229,11 @@ header .menu li {
   padding: 0;
   margin: 0;
 }
-/* line 85, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 71, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist span {
   display: inline-block;
 }
-/* line 87, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 73, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist li {
   line-height: 20px;
   height: 20px;
@@ -1245,19 +1245,19 @@ header .menu li {
   border-color: #444 #000 #222 #000;
   position: relative;
 }
-/* line 98, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 84, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist li.current {
   color: #CCC;
   background: #111;
   border-color: #000 #000 #222 #000;
 }
-/* line 102, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 88, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist .actions {
   position: absolute;
   right: 8px;
   height: 20px;
 }
-/* line 106, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 92, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist .actions .sprite {
   outline: none;
   cursor: pointer;
@@ -1299,7 +1299,7 @@ header .menu li {
   float: left;
   display: inline;
 }
-/* line 10, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 85, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .playlist .actions .sprite:hover, .kern-tunes-player .playlist .actions .sprite:focus {
   outline: none;
   background: #262626;
@@ -1331,7 +1331,7 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 14, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 89, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
 .kern-tunes-player .playlist .actions .sprite:active {
   outline: none;
   background: #4d4d4d;
@@ -1362,11 +1362,11 @@ header .menu li {
   margin: 0;
   padding: 0;
 }
-/* line 114, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 100, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .playlist .actions .sprite:hover, .kern-tunes-player .playlist .actions .sprite:focus, .kern-tunes-player .playlist .actions .sprite:active {
   margin: 0 0 0 5px;
 }
-/* line 116, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
+/* line 102, /home/robert/Sites/kern/public/sass/partials/ui/_tunes.scss */
 .kern-tunes-player .title {
   cursor: pointer;
   position: absolute;
@@ -1377,7 +1377,179 @@ header .menu li {
   left: 8px;
 }
 
-/* line 7, /home/robert/Sites/kern/public/sass/partials/ui/_ui.scss */
+/* line 5, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery {
+  -moz-transition: background-color 0.218s;
+  -webkit-transition: background-color 0.218s;
+  -o-transition: background-color 0.218s;
+  transition: background-color 0.218s;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* line 8, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery.big {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  min-height: 450px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  z-index: 55;
+}
+/* line 19, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  min-height: 450px;
+}
+/* line 24, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image .prev, #kern-gallery .image .holder, #kern-gallery .image .next {
+  position: absolute;
+}
+/* line 26, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image .holder {
+  width: 100%;
+  z-index: 2;
+}
+/* line 29, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image .prev, #kern-gallery .image .next {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background: #404040;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ3NDc0NyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM4MzgzOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #474747), color-stop(100%, #383838));
+  background: -webkit-linear-gradient(top, #474747, #383838);
+  background: -moz-linear-gradient(top, #474747, #383838);
+  background: -o-linear-gradient(top, #474747, #383838);
+  background: -ms-linear-gradient(top, #474747, #383838);
+  background: linear-gradient(top, #474747, #383838);
+  border-color: black;
+  color: black;
+  text-shadow: #595959 0 1px 0;
+  display: inline;
+  float: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  -moz-transition: all 0.218s ease;
+  -webkit-transition: all 0.218s ease;
+  -o-transition: all 0.218s ease;
+  transition: all 0.218s ease;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  z-index: 3;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 120px;
+}
+/* line 85, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+#kern-gallery .image .prev:hover, #kern-gallery .image .prev:focus, #kern-gallery .image .next:hover, #kern-gallery .image .next:focus {
+  outline: none;
+  background: #262626;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMwMzAzMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmMWYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303030), color-stop(100%, #1f1f1f));
+  background: -webkit-linear-gradient(top, #303030, #1f1f1f);
+  background: -moz-linear-gradient(top, #303030, #1f1f1f);
+  background: -o-linear-gradient(top, #303030, #1f1f1f);
+  background: -ms-linear-gradient(top, #303030, #1f1f1f);
+  background: linear-gradient(top, #303030, #1f1f1f);
+  text-shadow: #404040 0 1px 0;
+  border-color: black;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+/* line 89, /home/robert/Sites/kern/public/sass/partials/ui/_gplus.scss */
+#kern-gallery .image .prev:active, #kern-gallery .image .next:active {
+  outline: none;
+  background: #4d4d4d;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU5NTk1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ1NDU0NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(100%, #454545));
+  background: -webkit-linear-gradient(top, #595959, #454545);
+  background: -moz-linear-gradient(top, #595959, #454545);
+  background: -o-linear-gradient(top, #595959, #454545);
+  background: -ms-linear-gradient(top, #595959, #454545);
+  background: linear-gradient(top, #595959, #454545);
+  border-color: black;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px 10px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+/* line 43, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image .prev {
+  left: 20px;
+}
+/* line 45, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image .next {
+  right: 20px;
+}
+/* line 47, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery .image img {
+  display: block;
+  margin: auto;
+}
+/* line 50, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery ol {
+  overflow: hidden;
+}
+/* line 52, /home/robert/Sites/kern/public/sass/partials/ui/_gallery.scss */
+#kern-gallery li {
+  display: inline;
+  float: left;
+  margin: 0 3px 3px 0;
+}
+
+/* line 8, /home/robert/Sites/kern/public/sass/partials/ui/_ui.scss */
 .progressHolder {
   display: block;
   width: auto;
@@ -1399,7 +1571,7 @@ header .menu li {
   background-color: black;
 }
 
-/* line 17, /home/robert/Sites/kern/public/sass/partials/ui/_ui.scss */
+/* line 18, /home/robert/Sites/kern/public/sass/partials/ui/_ui.scss */
 .progress {
   height: 16px;
   line-height: 16px;

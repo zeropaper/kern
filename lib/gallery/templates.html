@@ -132,68 +132,29 @@
     </script>
   </head>
   <body>
-    <script type="text/template" class="kern-template kern-gallery-player" id="kern-gallery-player-template">
-      <div class="actions">
-        <div class="playlist">
-          <span class="prev"><span class="sprite">Previous</span></span>
-          <span class="next"><span class="sprite">Next</span></span>
-        </div>
-        <div class="current-image">
-          <span class="play">
-            <span class="sprite">Playing</span>
-          </span>
-        </div>
-      </div>
-      <div class="players-wrapper">
-        <audio controls="controls" preload="metadata" <%= autoplay %> ></audio>
-        <video style="display: none;"></video>
-      </div>
-      <ol class="playlist">
-        <li>
-          <span class="title">Track title</span>
-          <span class="actions">
-            <span class="forward"><span class="sprite">forward</span></span>
-            <span class="kick"><span class="sprite">kick</span></span>
-          </span>
-        </li>
-        <li class="current">
-          <span class="title">Track title qsq sqs qs s qsqs qs</span>
-          <span class="actions">
-            <span class="forward sprite">forward</span>
-            <span class="kick sprite">kick</span>
-          </span>
-        </li>
-        <li>
-          <span class="title">Track title</span>
-          <span class="actions">
-            <span class="forward sprite">forward</span>
-            <span class="kick sprite">kick</span>
-          </span>
-        </li>
-        <li>
-          <span class="title">Track iuhbihibih  ih ihi hih title</span>
-          <span class="actions">
-            <span class="forward sprite">forward</span>
-            <span class="kick sprite">kick</span>
-          </span>
-        </li>
-      </ol>
-    </script>
     <!--
     
     
     
     -->
     <script type="text/template" class="kern-template" id="kern-gallery-images-template">
-      <% _.each(collection.toJSON(), function(image, i){ %>
-      <li id="kern-gallery-image-<%= i %>" class="<%= image.current %>">
-        <span class="title" rel="<%= image.url %>"><%= image.name %></span>
-        <span class="actions">
-          <span class="forward sprite" data-cid="<%= image.cid %>">forward</span>
-          <span class="kick sprite" data-cid="<%= image.cid %>">kick</span>
-        </span>
-      </li>
-      <% }); %>
+      <% console.info(current); %>
+      <div class="image">
+        <% if(current) { %>
+          <span class="prev">Prev</span>
+          <div class="holder">
+            <img src="/i/view<%= current.url %>" />
+          </div>
+          <span class="next">Next</span>
+        <% } %>
+      </div>
+      <ol class="thumbs">
+        <% _.each(collection, function(image, i){ %>
+        <li id="kern-gallery-image-<%= i %>" class="<%= image.current %>">
+          <img src="<%= preset %><%= image.url %>" />
+        </li>
+        <% }); %>
+      </ol>
     </script>
   </body>
 </html>

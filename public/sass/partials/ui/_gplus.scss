@@ -75,3 +75,20 @@ $front-back-contrast: 35%;
   @include input($bg-color);
   &:focus, &:hover {
     @include input-hover(darken($bg-color, 5%), 55%); } }
+
+
+@mixin sprite-button {
+  $bg-color: lighten($body-color, 5%);
+  @include button($bg-color);
+  margin: 0;
+  padding: 0;
+  &:hover, &:focus {
+    @include button-hover(darken($body-color, 5%), 55%);
+    margin: 0;
+    padding: 0; }
+  &:active {
+    @include button-active(lighten($bg-color, 5%));
+    margin: 0;
+    padding: 0; }
+}
+
