@@ -1,5 +1,7 @@
 /.project
 /.settings
+/rolande
+/rolande/*
 /node_modules
 /node_modules/*
 /*~
