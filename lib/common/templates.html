@@ -17,5 +17,105 @@
     </script>
     <script type="text/template" id="contententry-template">
     </script>
+    
+
+
+
+
+<script type="text/template" id="form-element-template">
+<div class="form-element">
+  <%= element %>
+</div>
+</script>
+
+<script type="text/template" id="form-input-template">
+<div class="form-input form-<%= type %> <%= wrapperCssClass %>">
+  <% if (label) { %>
+  <label for="<%= id %>"><%= label %></label>
+  <% } %>
+  <input
+    type="<%= type %>"
+    placeholder="<%= placeholder %>"
+    value="<%= value %>"
+    id="<%= id %>"
+    class="<%= cssCLass %>"
+    />
+</div>
+</script>
+
+<script type="text/template" id="form-textarea-template">
+<div class="form-textarea <%= wrapperCssClass %>">
+  <% if (label) { %>
+  <label for="<%= id %>"><%= label %></label>
+  <% } %>
+  <textarea
+    placeholder="<%= placeholder %>"
+    value="<%= value %>"
+    id="<%= id %>"
+    class="<%= cssCLass %>"
+    ><%= value %></textarea>
+</div>
+</script>
+
+<script type="text/template" id="form-button-template">
+<button class="form-button <%= wrapperCssClass %>">
+  <span class="label"><%= value %></span>
+  <% if (icon) { %>
+  <span class="icon <%= icon %> <%= cssCLass %>"><!--  --></span>
+  <% } %>
+</button>
+</script>
+
+    
+    
+
+
+
+
+<script type="text/template" id="form-element-template">
+<div class="form-element">
+  <%= element %>
+</div>
+</script>
+
+<script type="text/template" id="form-input-template">
+<div class="form-input form-<%= type %> <%= wrapperCssClass %>">
+  <% if (label) { %>
+  <label for="<%= id %>"><%= label %></label>
+  <% } %>
+  <input
+    type="<%= type %>"
+    placeholder="<%= placeholder %>"
+    value="<%= value %>"
+    id="<%= id %>"
+    class="<%= cssCLass %>"
+    />
+</div>
+</script>
+
+<script type="text/template" id="form-textarea-template">
+<div class="form-textarea <%= wrapperCssClass %>">
+  <% if (label) { %>
+  <label for="<%= id %>"><%= label %></label>
+  <% } %>
+  <textarea
+    placeholder="<%= placeholder %>"
+    value="<%= value %>"
+    id="<%= id %>"
+    class="<%= cssCLass %>"
+    ><%= value %></textarea>
+</div>
+</script>
+
+<script type="text/template" id="form-button-template">
+<button class="form-button <%= wrapperCssClass %>">
+  <span class="label"><%= value %></span>
+  <% if (icon) { %>
+  <span class="icon <%= icon %> <%= cssCLass %>"><!--  --></span>
+  <% } %>
+</button>
+</script>
+
+    
   </body>
 </html>
