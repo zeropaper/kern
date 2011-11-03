@@ -52,7 +52,7 @@ var kernApp = new Kern({
     , require('./lib/av/av')
     , require('./lib/editor/editor')
     , require('./lib/tunes/tunes')
-    , require('./simplemodule/simplemodule')
+//    , require('./simplemodule/simplemodule')
   ]
   
   // extension configuration
