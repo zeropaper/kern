@@ -5,13 +5,17 @@
     <title>Insert title here</title>
   </head>
   <body class="templates-editing">
-    <ul class="kern-template" id="content-entry">
-    </ul>
-    <!--
-    
-    -->
-    <div class="kern-template" id="kern-album-template">
-      <h3>hello world</h3>
-    </div>
+    <script type="text/template" id="contententry-children-template">
+      <% _.each(children, function(child){ %>
+      <li class="">
+        <span>
+          <span class="title"><%= title %></span>
+          <span class="info"><%= info %></span>
+        </span>
+      </li>
+      <% }); %>
+    </script>
+    <script type="text/template" id="contententry-template">
+    </script>
   </body>
 </html>

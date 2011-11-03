@@ -291,15 +291,15 @@ pre {
     @include border-radius(2px);
     @include transition( all 0.218s ease );
     vertical-align: bottom;
-    color: darken($body-color, 45%);
+    color: lighten($body-color, 45%);
     overflow: hidden;
     
-    @include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+    //@include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
     
     
     
-    span {
-      color: $body-color;
+    .inner {
+      color: lighten($body-color, 45%);
       position: absolute;
       top: $spacing / 2;
       left: $spacing / 2;
@@ -307,18 +307,31 @@ pre {
       right: $spacing / 2;
       width: auto;
       max-width: 100%;
-      margin-right: -100%;
-      margin-left: -100%;
-      @include transition( all 0.218s ease ); }
+      margin-right: -110%;
+      margin-left: -110%;
+      @include border-radius($spacing * 3);
+      @include transition( all (0.218s * 2) ease );
+      .title, .info {
+        position: absolute;
+        left: 0;
+        right: 0; }
+      .title {
+        top: 0; }
+      .count {
+        font-size: 200%;
+        font-style: italic; }
+      .info {
+        bottom: 0;
+        top: auto;
+        text-align: right; } }
       
     &:hover, &:focus {
       background-color: $black;
       outline: none;
-      span {
+      .inner {
         margin-right: 0; 
         margin-left: 0; } } }
-  &.no-art a span {
-    color: darken($body-color, 45%);
+  &.no-art a .inner {
     margin-right: 0;
     margin-left: 0; } }
 

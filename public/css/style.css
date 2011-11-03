@@ -452,16 +452,12 @@ pre {
   -o-transition: all 0.218s ease;
   transition: all 0.218s ease;
   vertical-align: bottom;
-  color: black;
+  color: #a6a6a6;
   overflow: hidden;
-  -moz-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
-  -webkit-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
-  -o-box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
-  box-shadow: rgba(255, 255, 0, 0.8) -2px 1px 0, -2px -1px 0 rgba(255, 0, 255, 0.8), 1px 2px 0 rgba(0, 255, 255, 0.8);
 }
 /* line 301, /home/robert/Sites/kern/public/sass/partials/_page.scss */
-.children li a span {
-  color: #333333;
+.children li a .inner {
+  color: #a6a6a6;
   position: absolute;
   top: 4px;
   left: 4px;
@@ -469,26 +465,52 @@ pre {
   right: 4px;
   width: auto;
   max-width: 100%;
-  margin-right: -100%;
-  margin-left: -100%;
-  -moz-transition: all 0.218s ease;
-  -webkit-transition: all 0.218s ease;
-  -o-transition: all 0.218s ease;
-  transition: all 0.218s ease;
+  margin-right: -110%;
+  margin-left: -110%;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -o-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -khtml-border-radius: 24px;
+  border-radius: 24px;
+  -moz-transition: all 0.436s ease;
+  -webkit-transition: all 0.436s ease;
+  -o-transition: all 0.436s ease;
+  transition: all 0.436s ease;
 }
 /* line 314, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a .inner .title, .children li a .inner .info {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/* line 318, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a .inner .title {
+  top: 0;
+}
+/* line 320, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a .inner .count {
+  font-size: 200%;
+  font-style: italic;
+}
+/* line 323, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a .inner .info {
+  bottom: 0;
+  top: auto;
+  text-align: right;
+}
+/* line 328, /home/robert/Sites/kern/public/sass/partials/_page.scss */
 .children li a:hover, .children li a:focus {
   background-color: rgba(0, 0, 0, 0.8);
   outline: none;
 }
-/* line 317, /home/robert/Sites/kern/public/sass/partials/_page.scss */
-.children li a:hover span, .children li a:focus span {
+/* line 331, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li a:hover .inner, .children li a:focus .inner {
   margin-right: 0;
   margin-left: 0;
 }
-/* line 320, /home/robert/Sites/kern/public/sass/partials/_page.scss */
-.children li.no-art a span {
-  color: black;
+/* line 334, /home/robert/Sites/kern/public/sass/partials/_page.scss */
+.children li.no-art a .inner {
   margin-right: 0;
   margin-left: 0;
 }
