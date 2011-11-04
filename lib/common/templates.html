@@ -20,6 +20,17 @@
     
 
 
+<script type="text/sass-mixin" id="form-element-mixin">
+($param1, $param2: 'default value') {
+  color: blue;
+  font-size: $param1;
+  &:before {
+    content: $param2; } }
+</script>
+
+<script type="text/sass-variables" id="form-element-mixin">
+$variable-a: #fff;
+</script>
 
 
 <script type="text/template" id="form-element-template">
@@ -38,7 +49,7 @@
     placeholder="<%= placeholder %>"
     value="<%= value %>"
     id="<%= id %>"
-    class="<%= cssCLass %>"
+    class="<%= cssClass %>"
     />
 </div>
 </script>
@@ -52,7 +63,7 @@
     placeholder="<%= placeholder %>"
     value="<%= value %>"
     id="<%= id %>"
-    class="<%= cssCLass %>"
+    class="<%= cssClass %>"
     ><%= value %></textarea>
 </div>
 </script>
@@ -61,7 +72,7 @@
 <button class="form-button <%= wrapperCssClass %>">
   <span class="label"><%= value %></span>
   <% if (icon) { %>
-  <span class="icon <%= icon %> <%= cssCLass %>"><!--  --></span>
+  <span class="icon <%= icon %> <%= cssClass %>"><!--  --></span>
   <% } %>
 </button>
 </script>
@@ -88,7 +99,7 @@
     placeholder="<%= placeholder %>"
     value="<%= value %>"
     id="<%= id %>"
-    class="<%= cssCLass %>"
+    class="<%= cssClass %>"
     />
 </div>
 </script>
@@ -102,7 +113,7 @@
     placeholder="<%= placeholder %>"
     value="<%= value %>"
     id="<%= id %>"
-    class="<%= cssCLass %>"
+    class="<%= cssClass %>"
     ><%= value %></textarea>
 </div>
 </script>
@@ -111,7 +122,7 @@
 <button class="form-button <%= wrapperCssClass %>">
   <span class="label"><%= value %></span>
   <% if (icon) { %>
-  <span class="icon <%= icon %> <%= cssCLass %>"><!--  --></span>
+  <span class="icon <%= icon %> <%= cssClass %>"><!--  --></span>
   <% } %>
 </button>
 </script>
