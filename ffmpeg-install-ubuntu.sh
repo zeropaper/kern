@@ -1,3 +1,5 @@
+# http://ubuntuforums.org/showthread.php?t=786095
+
 BUILDDIR=$1
 mkdir -p $BUILDDIR
 
@@ -13,7 +15,7 @@ sudo apt-get install build-essential checkinstall git libfaac-dev libjack-jackd2
 
 
 # INSTALL - 2 - Install x264
-cd
+cd $BUILDDIR
 git clone git://git.videolan.org/x264
 cd x264
 ./configure --enable-static
@@ -24,7 +26,7 @@ sudo checkinstall --pkgname=x264 --pkgversion="3:$(./version.sh | \
 sudo apt-get remove libvpx-dev
 
 # INSTALL - 3 - Install libvpx
-cd
+cd $BUILDDIR
 git clone http://git.chromium.org/webm/libvpx.git
 cd libvpx
 ./configure
@@ -34,7 +36,7 @@ sudo checkinstall --pkgname=libvpx --pkgversion="1:$(date +%Y%m%d%H%M)-git" --ba
 
 
 # INSTALL - 4 - Install FFmpeg
-cd
+cd $BUILDDIR
 git clone --depth 1 git://git.videolan.org/ffmpeg
 cd ffmpeg
 ./configure --enable-gpl --enable-libfaac --enable-libmp3lame --enable-libopencore-amrnb \
@@ -47,7 +49,7 @@ hash x264 ffmpeg ffplay ffprobe
 
 
 # INSTALL - 5 - Install qt-faststart (optional)
-cd ~/x264
+cd $BUILDDIR/x264
 make distclean
 ./configure --enable-static
 make
@@ -66,15 +68,15 @@ sudo apt-get install build-essential git checkinstall yasm texi2html \
   libfaac-dev libjack-jackd2-dev libmp3lame-dev libopencore-amrnb-dev \
   libopencore-amrwb-dev libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev \
   libvorbis-dev libx11-dev libxfixes-dev zlib1g-dev
-cd ~/x264
+cd $BUILDDIR/x264
 make distclean
 git pull
 
-cd ~/libvpx
+cd $BUILDDIR/libvpx
 make clean
 git pull
 
-cd ~/ffmpeg
+cd $BUILDDIR/ffmpeg
 make distclean
 git pull
 
