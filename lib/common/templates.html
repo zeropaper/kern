@@ -3,21 +3,66 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
-  </head>
-  <body class="templates-editing">
-    <script type="text/template" id="contententry-children-template">
-      <% _.each(children, function(child){ %>
-      <li class="">
-        <span>
-          <span class="title"><%= title %></span>
-          <span class="info"><%= info %></span>
-        </span>
-      </li>
-      <% }); %>
-    </script>
-    <script type="text/template" id="contententry-template">
-    </script>
     
+
+
+    <script src="../../public/js/lib/jquery-1.6.4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function($){
+        $(document).ready(function(){
+          $('script.kern-template').each(function() {
+            var $t = $(this);
+            var $new = $('<div class="kern-template-wrapper"><div class="'+ $t.attr('class') +'" id="'+ $t.attr('id') +'-rendered" /></div>');
+            $new.children('.kern-template').html($t.html());
+            $t.before($new);
+          });
+        });
+      })(jQuery);
+    </script>
+
+
+
+
+  </head>
+  <body>
+
+
+
+
+
+
+
+<!--
+Content entry templates
+-->
+
+
+<script type="text/template" class="kern-template" id="contententry-children-template">
+  <% _.each(children, function(child){
+    document
+  }); %>
+</script>
+
+
+
+<script type="text/template" class="kern-template" id="contententry-template">
+  <li style="<%= cover %>" class="<%= cssClass %>">
+    <a href="<%= url %>">
+      <span class="inner">
+        <span class="title"><%= title %></span>
+        <span class="info"><%= children %></span>
+      </span>
+    </a>
+  </li>
+</script>
+    
+
+
+
+
+
+
+
 
 
 <script type="text/sass-mixin" id="form-element-mixin">
@@ -33,13 +78,13 @@ $variable-a: #fff;
 </script>
 
 
-<script type="text/template" id="form-element-template">
+<script type="text/template" class="kern-template" id="form-element-template">
 <div class="form-element">
   <%= element %>
 </div>
 </script>
 
-<script type="text/template" id="form-input-template">
+<script type="text/template" class="kern-template" id="form-input-template">
 <div class="form-input form-<%= type %> <%= wrapperCssClass %>">
   <% if (label) { %>
   <label for="<%= id %>"><%= label %></label>
@@ -54,7 +99,7 @@ $variable-a: #fff;
 </div>
 </script>
 
-<script type="text/template" id="form-textarea-template">
+<script type="text/template" class="kern-template" id="form-textarea-template">
 <div class="form-textarea <%= wrapperCssClass %>">
   <% if (label) { %>
   <label for="<%= id %>"><%= label %></label>
@@ -68,7 +113,7 @@ $variable-a: #fff;
 </div>
 </script>
 
-<script type="text/template" id="form-button-template">
+<script type="text/template" class="kern-template" id="form-button-template">
 <button class="form-button <%= wrapperCssClass %>">
   <span class="label"><%= value %></span>
   <% if (icon) { %>
@@ -83,13 +128,13 @@ $variable-a: #fff;
 
 
 
-<script type="text/template" id="form-element-template">
+<script type="text/template" class="kern-template" id="form-element-template">
 <div class="form-element">
   <%= element %>
 </div>
 </script>
 
-<script type="text/template" id="form-input-template">
+<script type="text/template" class="kern-template" id="form-input-template">
 <div class="form-input form-<%= type %> <%= wrapperCssClass %>">
   <% if (label) { %>
   <label for="<%= id %>"><%= label %></label>
@@ -104,7 +149,7 @@ $variable-a: #fff;
 </div>
 </script>
 
-<script type="text/template" id="form-textarea-template">
+<script type="text/template" class="kern-template" id="form-textarea-template">
 <div class="form-textarea <%= wrapperCssClass %>">
   <% if (label) { %>
   <label for="<%= id %>"><%= label %></label>
@@ -118,7 +163,7 @@ $variable-a: #fff;
 </div>
 </script>
 
-<script type="text/template" id="form-button-template">
+<script type="text/template" class="kern-template" id="form-button-template">
 <button class="form-button <%= wrapperCssClass %>">
   <span class="label"><%= value %></span>
   <% if (icon) { %>
