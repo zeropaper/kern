@@ -74,16 +74,14 @@ strong, th {
 input:valid, textarea:valid {}
 input:invalid, textarea:invalid {
   @include border-radius(1px);
-  @include single-box-shadow(red, 0, 0, 5px, 0);
-}
+  @include single-box-shadow(red, 0, 0, 5px, 0); }
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
 textarea {
   width: 100%;
   height: 60px;
-  display: block;
-}
+  display: block; }
 
 code, pre {
   padding: 0.5em;
@@ -94,7 +92,7 @@ code, pre {
   @include transition(all 0.218s ease);
   &:hover {
     width: auto;
-    max-width: auto; }
+    max-width: none; }
   &.stack {
     font-size: smaller; } }
 
