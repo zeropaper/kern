@@ -17,15 +17,17 @@ The Kern is not supposed to be used in a production environement (for now).
 Install
 ------------
 
-If you don't have node.js 4.12 and npm installed yet (and are using *Ubuntu*),
-there's a node-install.sh bash script you can run.
+If you don't have node.js 0.6.4 and npm installed yet (and are using *Ubuntu*),
+there's a node-install.sh bash script you can run.  
+Please... before using this script, read it.
 
 	else
  
-Find out how to install node.js 4.12 and npm and explain me...
+Find out how to install node.js 0.6.4 and npm and explain me...
 I'll write it down here. Thanks in advance.
 
 You may need compass and the compass html5-boilerplate gems. On *Ubuntu*:
+TODO: use rvm to control ruby version
     
     sudo apt-get install ruby1.9.1 # in order to install "gem"
     sudo gem install html5-boilerplate # will install compass if needed
@@ -46,7 +48,9 @@ The rest should be:
     git clone git://github.com/johndyer/mediaelement.git
     git clone git://github.com/Modernizr/Modernizr.git
     git clone git://github.com/weixiyen/jquery-filedrop.git
+    git clone git://github.com/ehynds/jquery-notify.git
 
+	wget http://documentcloud.github.com/backbone/backbone.js ./backbone.js
 
 
 Hello world!
