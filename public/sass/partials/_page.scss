@@ -22,8 +22,8 @@ body {
   width: 100%; }
 
 h1, h2, h3, h4, h5, label, legend, dt {
-  margin: 0.2em 0;
-  padding: 0.2em 0;
+  margin: 0.3em 0;
+  padding: 0.3em 0;
   color: $link-color;
   @include header-font; }
 
@@ -85,16 +85,18 @@ textarea {
 
 code, pre {
   padding: 0.5em;
-  border: 1px solid;
+  border: 1px solid #000;
+  border-color: #000 #444 #444 #000;
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
-  @include transition(all 0.218s ease);
-  &:hover {
-    width: auto;
-    max-width: none; }
+  background: #111;
+  color: #aaa;
+  @include box-shadow(#333 0 0 120px inset);
+  font-size: 0.9em;
+  @include border-radius(2px);
   &.stack {
-    font-size: smaller; } }
+    font-size: 0.7em; } }
 
 code {
   border: none;
