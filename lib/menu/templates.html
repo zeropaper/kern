@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    
+
+
+    <script src="../../public/js/lib/jquery-1.6.4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function($){
+        $(document).ready(function(){
+          $('script.kern-template').each(function() {
+            var $t = $(this);
+            var $new = $('<div class="kern-template-wrapper"><div class="'+ $t.attr('class') +'" id="'+ $t.attr('id') +'-rendered" /></div>');
+            $new.children('.kern-template').html($t.html());
+            $t.before($new);
+          });
+        });
+      })(jQuery);
+    </script>
+
+
+
+
+  </head>
+  <body>
+
+
+
+
+
+
+
+<!--
+Content entry templates
+-->
+
+
+<script type="text/template" class="kern-template" id="form-button-template">
+<button class="form-button <%= wrapperCssClass %>">
+  <span class="label"><%= value %></span>
+  <% if (icon) { %>
+  <span class="icon <%= icon %> <%= cssClass %>"><!--  --></span>
+  <% } %>
+</button>
+</script>
+
+    
+  </body>
+</html>

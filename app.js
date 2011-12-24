@@ -6,7 +6,8 @@ var kernApp = new Kern({
 
     // The directory where your content is,
     // supported content files (almost everything) will be scanned
-    contentDir:     __dirname +'/content'
+//    contentDir:     __dirname +'/content'
+    contentDir:     '/media/Windows7_OS/Documents and Settings/robert/Music/'
 
     // A directory where Kern can save some generated files like
     // converted videos, resized images..
