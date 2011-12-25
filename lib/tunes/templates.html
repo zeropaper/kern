@@ -187,7 +187,7 @@
     <script type="text/template" class="kern-template" id="kern-tunes-tracks-template">
       <% _.each(collection.toJSON(), function(track, i){ %>
       <li id="kern-tunes-track-<%= i %>" class="<%= track.current %>">
-        <span class="title" rel="<%= track.url %>"><%= track.name %></span>
+        <span class="title" rel="<%= track.id %>"><%= track.name %></span>
         <span class="actions">
           <span class="forward sprite" data-cid="<%= track.cid %>">forward</span>
           <span class="kick sprite" data-cid="<%= track.cid %>">kick</span>
