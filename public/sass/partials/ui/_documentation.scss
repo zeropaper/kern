@@ -1,0 +1,38 @@
+@import "../base";
+
+@import "compass/css3";
+
+.roadmap-list {
+	li {
+	 margin-bottom: 2em;
+	 list-style-type: decimal-leading-zero;
+	 list-style-position: outside;
+	 margin-left: 3em;
+	}
+	
+	h4, strong {
+	 text-transform: uppercase;
+	}
+	
+	strong {
+	 font-size: 0.7em;
+	 color: #666;
+	}
+
+  .dependencies {
+    font-style: italic;
+    padding: 0.5em;
+    margin: 0 1em 1em 0;
+    background-color: darken($body-color, 20%);
+    color: lighten($font-color, 10%);
+    @include border-radius(2px);
+  }
+  
+  .description {
+   margin: 1em 0;
+  }
+  
+  .meta {
+   font-size: 0.8em;
+  }
+}
