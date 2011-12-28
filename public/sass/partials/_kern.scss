@@ -38,7 +38,7 @@ textarea {
   padding: $spacing;
   height: $header-height - ($spacing * 4);
   min-height: $header-height - ($spacing * 4);
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bolder;
   z-index: 999;
   border: 1px dashed darken($body-color, 40%);

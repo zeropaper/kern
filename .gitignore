@@ -9,9 +9,11 @@
 /content
 /rolande.js
 /rolande-test.js
-/.sass-cache
+/public/css/.sass-cache
 /cache
 /snoop
 /app.local.js
+/DiscoBandits
+/DiscoBandits/*
 /KernDocs
 /KernDocs/*

@@ -259,15 +259,16 @@ pre {
   
   @include float-left;
   width: $box-width;
-  height: $box-width;
+  height: $box-width / 1.618;
   margin: 0 4px 4px 0;
   font-weight: bolder;
   font-size: smaller;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: $black;
   background-size: 100%;
+  @include box-shadow($font-color 0 0 5px inset);
+  @include border-radius(($spacing / 1) );
   
   a {
     word-wrap: break-word;
@@ -279,18 +280,15 @@ pre {
     padding: 4px;
     outline: none;
     
-    @include border-radius(2px);
+    @include border-radius(($spacing / 1) - 2px);
     @include transition( all 0.218s ease );
     vertical-align: bottom;
-    color: lighten($body-color, 45%);
     overflow: hidden;
     
     //@include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
     
     
-    
     .inner {
-      color: lighten($body-color, 45%);
       position: absolute;
       top: $spacing / 2;
       left: $spacing / 2;
@@ -317,7 +315,7 @@ pre {
         text-align: right; } }
       
     &:hover, &:focus {
-      background-color: $black;
+      background-color: darken($body-color, 40%);
       outline: none;
       .inner {
         margin-right: 0; 

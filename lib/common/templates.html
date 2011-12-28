@@ -210,7 +210,7 @@ $variable-a: #fff;
     
 
 <script type="text/template" class="kern-template" id="html5-audio-player-template">
-    <audio width="<%= width %>" height="<%= height %>" controls="controls" preload="none">
+    <audio controls="controls" preload="none">
       <% _.each(formats, function(ext, mime){ %>
       <source type="<%= mime %>" src="/av/same<%= url %><% if (originalMime != mime) { %>.<%= ext %><% } %>" />
       <% }); %>

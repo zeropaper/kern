@@ -1,5 +1,8 @@
 /content/*    # ignore all external submodules
 /public/*     # static files
-/cache/*     # static files
-./README.md   # a specific file
+/cache/*      # static files
+
+*.md          # ignore any Markdown
 *.css         # ignore any CSS files too
+
+/KernDocs/*   # static files
