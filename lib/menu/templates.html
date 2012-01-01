@@ -37,15 +37,22 @@ Content entry templates
 -->
 
 
-<script type="text/template" class="kern-template" id="form-button-template">
-<button class="form-button <%= wrapperCssClass %>">
-  <span class="label"><%= value %></span>
-  <% if (icon) { %>
-  <span class="icon <%= icon %> <%= cssClass %>"><!--  --></span>
+<script type="text/template" class="kern-template" id="menu-entry-template">
+<li rel="<%= id %>" class="child depth-<%= depth %>">
+  <a href="<%= id %>"><%= title %></a>
+  <% var valids = _.filter(children, function(child){
+    return (_.isUndefined(child.mime) || /^text\//i.test(child.mime)) && child.name != 'index.html';
+  }); if (valids.length) { %>
+  <ul class="children depth-<%= depth %>">
+    <% _.each(valids, function(valid) {
+      var childrenItems = _.template(K.getTemplate('menu-entry'), _.extend({K: K, _:_}, valid));
+    %><%= childrenItems %><% }); %>
+  </ul>
   <% } %>
-</button>
+</li>
 </script>
 
+    
     
   </body>
 </html>
