@@ -33,13 +33,12 @@ h1, h2, h3 {
 h4, h5, label, legend, dt {
   font-weight: 400; }
 
-
 h1 {
-  font-size: 2.4em; }
-h2 {
   font-size: 2em; }
+h2 {
+  font-size: 1.8em; }
 h3 {
-  font-size: 1.6em; }
+  font-size: 1.4em; }
 h4 {
   font-size: 1.2em; }
 
@@ -252,75 +251,115 @@ pre {
   &.server {
     font-style: italic; } }
 
-.children {
-  overflow: hidden; }
-.children li {
-  $box-width: 180px;
-  
-  @include float-left;
-  width: $box-width;
-  height: $box-width / 1.618;
-  margin: 0 4px 4px 0;
-  font-weight: bolder;
-  font-size: smaller;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  @include box-shadow($font-color 0 0 5px inset);
-  @include border-radius(($spacing / 1) );
-  
-  a {
-    word-wrap: break-word;
-    position: absolute;
-    bottom: 2px;
-    left: 2px;
-    right: 2px;
-    top: 2px;
-    padding: 4px;
-    outline: none;
-    
-    @include border-radius(($spacing / 1) - 2px);
-    @include transition( all 0.218s ease );
-    vertical-align: bottom;
-    overflow: hidden;
-    
-    //@include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
-    
-    
-    .inner {
-      position: absolute;
-      top: $spacing / 2;
-      left: $spacing / 2;
-      bottom: $spacing / 2;
-      right: $spacing / 2;
-      width: auto;
-      max-width: 100%;
-      margin-right: -110%;
-      margin-left: -110%;
-      @include border-radius($spacing * 3);
-      @include transition( all (0.218s * 2) ease );
-      .title, .info {
-        position: absolute;
-        left: 0;
-        right: 0; }
-      .title {
-        top: 0; }
-      .count {
-        font-size: 200%;
-        font-style: italic; }
-      .info {
-        bottom: 0;
-        top: auto;
-        text-align: right; } }
-      
-    &:hover, &:focus {
-      background-color: darken($body-color, 40%);
-      outline: none;
-      .inner {
-        margin-right: 0; 
-        margin-left: 0; } } }
-  &.no-art a .inner {
-    margin-right: 0;
-    margin-left: 0; } }
+#content {
+	.children {
+	  overflow: hidden; }
+	.children li {
+	  $box-width: 180px;
+	  
+	  @include float-left;
+	  width: $box-width;
+	  height: $box-width / 1.618;
+	  margin: 0 4px 4px 0;
+	  font-weight: bolder;
+	  font-size: smaller;
+	  position: relative;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: 100%;
+//	  @include box-shadow($font-color 0 0 5px inset);
+//	  @include border-radius(($spacing / 1) );
+	  
+	  a {
+	    word-wrap: break-word;
+	    position: absolute;
+	    bottom: 2px;
+	    left: 2px;
+	    right: 2px;
+	    top: 2px;
+	    padding: 4px;
+	    outline: none;
+	    
+//	    @include border-radius(($spacing / 1) - 2px);
+	    @include transition( all 0.218s ease );
+	    vertical-align: bottom;
+	    overflow: hidden;
+	    
+	    //@include box-shadow($yellow -2px 1px 0, -2px -1px 0 $magenta, 1px 2px 0 $cyan);
+	    
+	    
+	    .inner {
+	      position: absolute;
+	      top: $spacing / 2;
+	      left: $spacing / 2;
+	      bottom: $spacing / 2;
+	      right: $spacing / 2;
+	      width: auto;
+	      max-width: 100%;
+	      margin-right: -110%;
+	      margin-left: -110%;
+//	      @include border-radius($spacing * 3);
+	      @include transition( all (0.218s * 2) ease );
+	      .title, .info {
+	        position: absolute;
+	        left: 0;
+	        right: 0; }
+	      .title {
+	        top: 0; }
+	      .count {
+	        font-size: 200%;
+	        font-style: italic; }
+	      .info {
+	        bottom: 0;
+	        top: auto;
+	        text-align: right; } }
+	      
+	    &:hover, &:focus {
+	      background-color: darken($body-color, 40%);
+	      outline: none;
+	      .inner {
+	        margin-right: 0; 
+	        margin-left: 0; } } }
+	  &.no-art a .inner {
+	    margin-right: 0;
+	    margin-left: 0; } }
+}
 
+#navigation {
+	.child {
+	  list-style: none;
+	  padding: 0 0.2em;
+	  border-bottom: 1px solid darken($body-color, 30%);
+	  &:last-child {
+	   border-bottom: none;
+	  }
+	  ul {
+	   width: 100%;
+	  }
+	}
+  .depth-1 {
+   padding-left: 0.4em;
+   ul {
+    margin-left: -0.4em;
+   }
+  }
+  .depth-2 {
+   padding-left: 0.6em;
+   ul {
+    margin-left: -0.6em;
+   }
+}
+  .depth-3 {
+   padding-left: 0.8em;
+   ul {
+    margin-left: -0.8em;
+   }
+}
+  .depth-4 {
+   padding-left: 1em;
+   ul {
+    margin-left: -1em;
+   }
+  }
+	
+}

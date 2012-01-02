@@ -27,15 +27,6 @@
     height: auto;
     overflow: hidden;
   }
-/*
-  h1, h2, h3, h4, h5, label, legend, dt {
-    @include text-shadow(none);
-  }
-  h1, h2, h3 {
-    color: $black;
-    @include text-shadow(none);
-  }
-*/
 }
 
 @mixin mobile-layout($landscape: 1) {
@@ -53,6 +44,9 @@
 
 @mixin tablet-layout($landscape: 1) {
   @include device-overrides;
+	body {
+	  font-size: 10px;
+	}
   #meta {
     display: none; }
   #content {
@@ -64,54 +58,57 @@
      @include box-shadow(none); } }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    //background: blue;
+    background: blue;
   }
   @include tablet-layout(0);
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   body {
-    //background: purple;
+    background: purple;
   }
   @include tablet-layout;
 }
 
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   body {
-    //background: green;
+    background: green;
   }
   @include mobile-layout(0);
 }
 
 
-@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 480px) and (orientation: landscape) {
   body {
-    //background: yellow;
+    background: black;
   }
   @include mobile-layout;
+  body {
+    font-size: 10px;
+  }
 }
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
   body {
-    //background: red;
+    background: red;
   }
 /* Styles */
 }
 
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 480px) and (max-device-width : 680px) {
+/* Smartphones (portrait and landscape) ----------- 
+@media only screen and (min-width : 480px) and (max-width : 680px) {
   body {
-    //background: #FF3;
+    background: #FF3;
   }
-/* Styles */
-}
+
+}*/
 
 
 
