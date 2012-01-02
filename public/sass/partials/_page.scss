@@ -193,7 +193,12 @@ pre {
   width: $meta-width; }
 
 
-
+#content {
+  li {
+    list-style-position: inside;
+    padding-left: 0.5em;
+  }
+}
 
 
 
@@ -250,7 +255,7 @@ pre {
     color: #933; }
   &.server {
     font-style: italic; } }
-
+/*
 #content {
 	.children {
 	  overflow: hidden; }
@@ -324,7 +329,7 @@ pre {
 	    margin-right: 0;
 	    margin-left: 0; } }
 }
-
+*/
 #navigation {
 	.child {
 	  list-style: none;
