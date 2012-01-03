@@ -29,4 +29,4 @@ line_comments = (environment == :development)
 
 
 # Should allow to use sass files from Kern or node modules.
-additional_import_paths = ["../node_modules", "../lib"]
+#additional_import_paths = ["../node_modules", "../lib"]
