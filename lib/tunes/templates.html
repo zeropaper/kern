@@ -16,106 +16,6 @@
     <link href="../../public/css/style.css" type="text/css" rel="stylesheet" />
     <style class="kern-style" id="kern-tunes">
 
-/*
-.kern-tunes-player .sprite {
-  text-indent: -999em;
-  background: #eee;
-}
-
-.kern-tunes-player .actions .sprite {
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-}
-
-.kern-tunes-player,
-.kern-tunes-player .actions .playlist {
-  overflow: hidden;
-  color: #ccc;
-  background-color: #333;
-}
-.kern-tunes-player .actions .playlist .sprite {
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  margin: 0 5px;
-  float: left;
-  display: inline;
-}
-
-.kern-tunes-player .actions .play,
-.kern-tunes-player .actions .pause {
-  cursor: pointer;
-  height: 70px;
-  width: 70px;
-  margin: 0 5px;
-  background-color: green;
-}
-
-.kern-tunes-player .actions .pause {
-  background-color: blue;
-}
-
-.kern-tunes-player .playlist li.current {
-  color: #CCC;
-  background: #111;
-  border-color: #000 #000 #222 #000;
-}
-.kern-tunes-player .playlist {
-  color: #ccc;
-  background-color: #333;
-  overflow: hidden;
-  font-size: 80%;
-  padding: 0;
-  margin: 0;
-}
-.kern-tunes-player .playlist li {
-  padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px 0;
-  list-style: none;
-  margin: 0;
-  border-color: #444 #000 #222 #000;
-}
-.kern-tunes-player .playlist span {
-  display: inline-block;
-}
-
-.kern-tunes-player .playlist li {
-  position: relative;
-  height: 20px;
-}
-
-.kern-tunes-player .playlist .title {
-  cursor: pointer;
-  position: absolute;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 165px;
-  left: 8px;
-}
-
-.kern-tunes-player .playlist .actions {
-  position: absolute;
-  right: 8px;
-}
-
-.kern-tunes-player .playlist .sprite {
-  text-indent: -999em;
-  width: 20px;
-  height: 20px;
-}
-
-.kern-tunes-player .kick {
-  background: red;
-}
-.kern-tunes-player .forward {
-  background: green;
-}
-*/
-
     </style>
     <script src="../../public/js/lib/jquery-1.6.4.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -189,8 +89,10 @@
       <li id="kern-tunes-track-<%= i %>" class="<%= track.current %>">
         <span class="title" rel="<%= track.id %>"><%= track.name %></span>
         <span class="actions">
-          <span class="forward sprite" data-cid="<%= track.cid %>">forward</span>
-          <span class="kick sprite" data-cid="<%= track.cid %>">kick</span>
+          <% if (connected) { %>
+          <span class="forward sprite" data-cid="<%= track.cid %>" title="Forward the track">forward</span>
+          <% } %>
+          <span class="kick sprite" data-cid="<%= track.cid %>" title="Kick the track">kick</span>
         </span>
       </li>
       <% }); %>
