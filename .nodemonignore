@@ -1,4 +1,4 @@
-/content/*    # ignore all external submodules
+#/content/*    # ignore all external submodules
 /public/*     # static files
 /cache/*      # static files
 

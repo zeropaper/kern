@@ -6,8 +6,9 @@ var kernApp = new Kern({
 
     // The directory where your content is,
     // supported content files (almost everything) will be scanned
-//    contentDir:     __dirname +'/content'
-    contentDir:     '/media/Windows7_OS/Documents and Settings/robert/Music/'
+   contentDir:     __dirname +'/content'
+//    contentDir:     '/media/Windows7_OS/Documents and Settings/robert/Music/'
+    // contentDir:     __dirname +'/projects/KernDocs'
 
     // A directory where Kern can save some generated files like
     // converted videos, resized images..
@@ -48,11 +49,16 @@ var kernApp = new Kern({
 
   // Loading some Kern extensions
   , extensions: [
-      require('./lib/admin/admin')
+      require('./lib/content/content')
+    , require('./lib/admin/admin')
     , require('./lib/image/image')
     , require('./lib/av/av')
     , require('./lib/editor/editor')
     , require('./lib/tunes/tunes')
+    , require('./lib/breadcrumb/breadcrumb')
+    , require('./lib/menu/menu')
+    , require('./lib/watcher/watcher')
+    , require('./lib/socket/socket')
 //    , require('./simplemodule/simplemodule')
   ]
   
