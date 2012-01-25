@@ -114,10 +114,27 @@
 }
 
 #navigation {
+  position: fixed;
+
+  .wrapper {
+    position: relative;
+    max-height: 200px;
+    overflow: auto;
+    text-transform: uppercase;
+    font-size: smaller;
+  }
+/*  ul {
+    position: absolute;
+    overflow: auto;
+    height: auto;
+  }*/
+  ul .child ul {
+    position: static;
+  }
   .child {
     list-style: none;
     padding: 0 0.2em;
-    @include transition(background-color 0.218s ease);
+    @include transition(background-color 0.400s ease);
     @include border-radius(2px);
     &>ul>li {
       display: none;

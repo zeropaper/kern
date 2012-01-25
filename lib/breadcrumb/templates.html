@@ -40,11 +40,12 @@ Content entry templates
 <script type="text/template" class="kern-template" id="breadcrumb-entry-template">
 <span class="entry">
 
-  <a href="'+ url +'">'+ title +'</a>'
+  <a href="<%= url %>"><%= title %></a>
 
-  <% if(_.isArray(sub) && sub.length) { %>
+  <% if(_.isArray(sub) && sub.length) {
+    var subs = sub.join("\n"); %>
   <span class="children">
-    <% sub.join("\n"); %>
+    <%= subs %>
   </span>
   <% } %>
 

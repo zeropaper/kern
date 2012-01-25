@@ -89,7 +89,7 @@
       <li id="kern-tunes-track-<%= i %>" class="<%= track.current %>">
         <span class="title" rel="<%= track.id %>"><%= track.name %></span>
         <span class="actions">
-          <% if (connected) { %>
+          <% if (typeof connected != 'undefined' && connected) { %>
           <span class="forward sprite" data-cid="<%= track.cid %>" title="Forward the track">forward</span>
           <% } %>
           <span class="kick sprite" data-cid="<%= track.cid %>" title="Kick the track">kick</span>
