@@ -2,6 +2,8 @@
 /.settings
 /rolande
 /rolande/*
+/jasmine
+/jasmine/*
 /node_modules
 /node_modules/*
 /*~

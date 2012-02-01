@@ -44,6 +44,7 @@ var kernApp = new Kern({
       key:     'kern.sid'
     }
  
+  , crawlMaxDepth: 20
 
   //, extensionsDir:  __dirname +'/modules'
 
