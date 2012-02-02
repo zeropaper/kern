@@ -1,4 +1,4 @@
-var Kern = require('./lib/kern').Kern;
+var Kern = require(__dirname+'/lib/kern').Kern;
 
 var port = process.env.C9_PORT || 8080;
 
