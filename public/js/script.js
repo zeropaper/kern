@@ -69,8 +69,10 @@
 
 
     var $logo = $('canvas#logo');
-    draw.call($logo[0], $logo.width());
-    $("textarea").TextAreaExpander();
+    if ($logo.length) {
+      draw.call($logo[0], $logo.width());
+      $("textarea").TextAreaExpander();
+    }
   });
 
   
