@@ -17,41 +17,32 @@ The Kern is not supposed to be used in a production environement (for now).
 Install
 ------------
 
-If you don't have node.js 0.6.4 and npm installed yet (and are using *Ubuntu*),
-there's a node-install.sh bash script you can run.  
-Please... before using this script, read it.
+__This stuff needs to be updated__
 
-	else
- 
-Find out how to install node.js 0.6.4 and npm and explain me...
-I'll write it down here. Thanks in advance.
+1. Installing node (note: v0.6.13 is perfectly fine as far as I know)
 
-You may need compass and the compass html5-boilerplate gems. On *Ubuntu*:
-TODO: use rvm to control ruby version
-    
-    sudo apt-get install ruby1.9.1 # in order to install "gem"
-    sudo gem install html5-boilerplate # will install compass if needed
+    git clone git://github.com/creationix/nvm.git ~/.nvm
+    . ~/.nvm/nvm.sh
+    nvm sync
+    nvm install v0.4.12
+    nvm use v0.4.12
 
-The rest should be:
+2. The rest should be:
 
     git clone git://github.com/zeropaper/kern.git
     cd kern
+    mkdir cache #if you want your cache to be located here
     npm install -d
     cd public/js
     mkdir lib
     cd lib
-    git clone git://github.com/documentcloud/underscore.git
-    git clone git://github.com/documentcloud/backbone.git
-    git clone git://github.com/jquery/jquery.git
-    cd jquery && make && cd ..
+    git clone git://github.com/jquery/jquery-ui.git
     git clone git://github.com/madrobby/zepto.git
     git clone git://github.com/johndyer/mediaelement.git
     git clone git://github.com/Modernizr/Modernizr.git
     git clone git://github.com/weixiyen/jquery-filedrop.git
     git clone git://github.com/ehynds/jquery-notify.git
-
-	wget http://documentcloud.github.com/backbone/backbone.js ./backbone.js
-
+    
 
 Hello world!
 ------------
@@ -66,12 +57,10 @@ Hello world!
       
       // not needed at all... session support
       _session: {
-        secret: 'we9dwed',
+        secret: '<keyboard cat>',
         key: 'kern.sid'
       }
       
       // some other settings...
     });
-    
-    // if you installed compass
-    kernApp.compassWatch();
+
