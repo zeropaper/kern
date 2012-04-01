@@ -59,13 +59,13 @@ Hello world!
     var Kern = require('./lib/kern').Kern;
     var kernApp = new Kern({
       // you may need to create that directory or adapt the path
-      contentDir:   __dirname +'/content',
-      publicDir:    __dirname +'/public',
+      _contentDir:   __dirname +'/content',
+      _publicDir:    __dirname +'/public',
       port:         8080,
       hostname:     'localhost',
       
       // not needed at all... session support
-      session: {
+      _session: {
         secret: 'we9dwed',
         key: 'kern.sid'
       }
