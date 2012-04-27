@@ -34,14 +34,14 @@
 
 <script type="text/kern-cript" id="model-parsing-client">
 var $html = $('<div>'+ info.regions.main +'</div>');
-console.info('Evaluated: $html.html()', $html.html());
+
 </script>
 
 
 <script type="text/kern-script" class="kern-common" id="model-parsing-common">
 
 var $html = $('<div>'+ info.regions.main +'</div>');
-console.info('Evaluated: $html.html()', $html.html());
+
 
 $('.kern-models', $html).each(function(){
   var $list = $(this);
@@ -53,7 +53,7 @@ $('.kern-models', $html).each(function(){
   var DataCollection = Backbone.Collection.extend({
     model: DataModel,
     initialize: function(models, options){
-      console.info('Creating a collection');
+      
       this.dataView = new DataCollectionView(_.extend({dataCollection: this},
         options));
     }
@@ -66,7 +66,7 @@ $('.kern-models', $html).each(function(){
       if (!this.dataCollection.length) this.serialize();
     },
     serialize: function() {
-      console.info('Serialization begin');
+      
       var view = this
           collection = view.dataCollection
       ;
@@ -84,7 +84,7 @@ $('.kern-models', $html).each(function(){
       return this;
     },
     render: function() {
-      console.info('Rendering begin');
+      
       $(this.el).html('Rendered');
       return this;
     }

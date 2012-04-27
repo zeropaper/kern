@@ -115,7 +115,7 @@
           url: '/kern',
           
           uploadFinished: function(i, file, response) {
-            console.info('i, file, response', i, file, response);
+            
             $('.preview', dropbox).eq(i).addClass('done');
             // response is the JSON object that post_file.php returns
           },
@@ -139,15 +139,15 @@
           // Called before each upload is started
           beforeEach: function(file) {
             if (file.type.match(/\/html/)) {
-              console.info('A HTML file!!', file);
+              
               var reader = new FileReader();
               reader.onload = function(e) {
-                console.info('reader load', reader, e.target.result, e);
+                
                 
                 $('body').append('<iframe name="filepreview" style="width:100%;height: 400px;"></iframe>');
                 $('html', frames['filepreview'].document).html(e.target.result);
               };
-              console.info('reader', reader);
+              
               reader.readAsText(file);
             }
             else if (file.type.match(/^(image|video|audio)\//)) {
@@ -163,16 +163,16 @@
           },
           
           uploadStarted: function(i, file, len) {
-            console.info('uploadstarted', i, file, len);
+            
           },
           
           progressUpdated: function(i, file, progress) {
-            console.info('progressUpdated', i, file, progress);
+            
             try {
               $.data(file).width(progress +'%').text(progress);
             }
             catch (e) {
-              console.error(e);
+              
             }
           }
           

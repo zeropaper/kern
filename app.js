@@ -29,7 +29,7 @@ var kernApp = new Kern({
 
   // in order to have real-time change propagation,
   // you'll need to enable the websocket support
-  , socketEnabled:  true
+  , _socketEnabled:  true
 
   // if that parameter is set to true, Kern will attempt to make a
   // offline browsable web app

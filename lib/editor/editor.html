@@ -64,14 +64,14 @@
     <script type="text/javascript">
       (function($) {
         $(window).load(function() {
-          console.info('Starting editor');
+          
           var $notifier = $('#notifier').css({
             'z-index': 10000,
             position: 'absolute'
           }).notify();
           
           function submitCallback(data, statusText, xhr, $form) {
-            console.info(data, statusText);
+            
             var error = data.success ? '' : '<div class="error">' + data.error.message + '</div>';
             $notifier.notify('create', {
               title: data.success ? 'Success!' : 'Error',
@@ -106,7 +106,7 @@
             resize_enabled: false
           
           }).bind('instanceReady.ckeditor', function() {
-            console.info('instanceReady.ckeditor');
+            
             var editor = $(this).ckeditorGet();
             
             // doesn't work... too bad
@@ -116,7 +116,7 @@
                 width: '100%',
                 height: '100%'
               });
-              console.info('Maximized editor');
+              
             });
             
             editor.execCommand('maximize');
@@ -129,9 +129,9 @@
           });
           
           $('textarea').bind('setData.ckeditor', function(ev, opt) {
-            console.info('setData', arguments);
+            
           }).bind('getData.ckeditor', function(ev, opt) {
-            console.info('getData', arguments);
+            
           });
           
         });
